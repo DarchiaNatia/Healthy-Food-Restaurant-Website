@@ -1,81 +1,111 @@
 body {
     background-color: gray;
-    header {
-        .header-div {
-            @include display-flex;
-            width: 95%;
-            margin: 30px auto;
-            .humburger-menu, .empty {
-                width: 50%;
-            }
-            .humburger-menu-btn {
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                @include display-flex(column, space-around, center);
-                .line {
-                    width: 100%;
-                    height: 3px;
-                    background-color: #fff;
-                }
-            }
+header {
+    .sideNavigation-wrapper {
+        .sideNavigation-bg {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0;
+            display: none;
+            transition: 0.5s;
+            background-color: #000;
+            z-index: 2;
         }
-        .sideNavigation-wrapper {
-            .sideNavigation-bg {
-                position: fixed;
-                width: 100%;
-                height: 100vh;
-                top: 0px;
-                bottom: 0px;
-                left: 0px;
-                opacity: 0;
-                display: none;
-                transition: 0.5s;
-                background-color: #000;
-                z-index: 1;
-            }
-            .sideNavigation {
-                height: 100vh;
-                width: 0;
-                position: fixed;
-                z-index: 2;
-                top: 0;
-                left: 0;
-                background-color: $sideNavigation-BG;
-                overflow-x: hidden;
-                transition: 0.5s;
-                padding-top: 60px;
+        .sideNavigation {
+            height: 100vh;
+            width: 0;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            background-color: $sideNavigation-BG;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
 
-                .pages {
-                    margin-top: 30px;
-                    & > a {
-                        padding: 8px 8px 8px 32px;
-                        text-decoration: none;
-                        font-size: 25px;
-                        color: $navigation-color;
-                        display: block;
-                        transition: 0.3s;
-                        &:hover {
-                            color: $navigation-hover;
-                        }
-
-                    }
-                }
-                .close-btn {
-                    position: absolute;
-                    top: 30px;
-                    right: 25px;
-                    font-size: 36px;
-                    margin-left: 50px;
-                    color: $navigation-color;
-                    transition: 0.5s;
+            .pages {
+                margin-top: 30px;
+                & > a {
+                    padding: 8px 8px 8px 32px;
+                    @include text-style($Playfair-Display-font, $navigation-link-size, normal, 300, $navigation-link-size, 1px, $navigation-color);
+                    display: block;
+                    transition: 0.3s;
                     &:hover {
                         color: $navigation-hover;
                     }
                 }
             }
-
-        }   
+            .close-btn {
+                position: absolute;
+                top: 30px;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+                color: $navigation-color;
+                transition: 0.5s;
+                &:hover {
+                    color: $navigation-hover;
+                }
+            }
+        }
     }
-    //end of Header Section
+}
+
+.cover-section {
+    .parallax-bg {
+        background-image: url("../images/cover-image.jpeg");
+        min-height: 800px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .cover-wrapper {
+            position: relative;
+            .transparent-div {
+                position: absolute;
+                width: 100%;
+                min-height: 800px;
+                background-color: rgba(0,0,0,0.5);
+            }
+            .cover-elements {
+                position: relative;
+                .burger-menu-div {
+                    @include display-flex;
+                    width: 95%;
+                    padding-top: 30px;
+                    .empty {
+                        width: 80%;
+                    }
+                    .burger-btn {
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        @include display-flex(column, space-around, center);
+                        .line {
+                            width: 100%;
+                            height: 3px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+.home-section {
+    height: 600px;
+    background-color: rgb(122, 192, 169);
+}
+
+
+
+
+
+
 }
