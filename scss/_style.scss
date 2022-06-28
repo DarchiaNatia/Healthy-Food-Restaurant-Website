@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    // background-color: gray;
 header {
     .sideNavigation-wrapper {
         .sideNavigation-bg {
@@ -70,7 +70,8 @@ header {
             .transparent-div {
                 position: absolute;
                 width: 100%;
-                min-height: 800px;
+                // min-height: 800px;
+                height: 100%;
                 background-color: rgba(0,0,0,0.5);
             }
             .cover-elements {
@@ -94,13 +95,37 @@ header {
                         }
                     }
                 }
+                .img-logo {
+                    max-width: 360px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 60px auto;
+                }
+                .heading-1 {
+                    @include text-style($Playfair-Display-font, $heading-1-size, normal, bold, $heading-1-size, 0px, #fff);
+                    text-align: center;
+                    margin-top: 120px;
+                }
+                .cover-text {
+                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 26px, 0px, #fff);
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                .img-triangle {
+                    max-width: 120px;
+                    width: 100%;
+                    height: 100px;
+                    display: block;
+                    margin: 70px auto 0px;
+                }
             }
         }
     }
 } 
 .home-section {
     height: 600px;
-    background-color: rgb(122, 192, 169);
+    background-color: #fff
 }
 
 
