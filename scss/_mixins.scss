@@ -8,7 +8,7 @@
 @mixin  transition-ease-in-out {
     transition: all 0.5s ease-in-out;  
 }
-@mixin text-style ($family, $size, $style, $weight, $height, $spacing, $color) {
+@mixin text-style ($family, $size, $style, $weight, $height, $spacing, $color, $align) {
     font-family: $family;
     font-size: $size;
     font-style: $style;
@@ -16,4 +16,5 @@
     line-height: $height;
     letter-spacing: $spacing;
     color: $color;
+    text-align: $align;
 }
