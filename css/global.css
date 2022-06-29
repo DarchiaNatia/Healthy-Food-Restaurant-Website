@@ -131,10 +131,10 @@ body header .sideNavigation-wrapper .sideNavigation .close-btn:hover {
 body .cover-section .parallax-bg {
   background-image: url("../images/cover-image.jpeg");
   min-height: 800px;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 
@@ -243,10 +243,6 @@ body .cover-section .parallax-bg .cover-wrapper .cover-elements .img-triangle {
   height: 100px;
   display: block;
   margin: 95px auto;
-}
-
-body .home-section {
-  height: 600px;
 }
 
 body .home-section .home-section-wrapper .home-section-heading {
@@ -360,5 +356,139 @@ body .home-section .home-section-wrapper .section-main-information .info-details
 body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn:hover {
   border-bottom: 2px solid #a59797;
   color: #a59797;
+}
+
+body .menu-section {
+  background-color: #f2f2f2;
+  padding-top: 80px;
+}
+
+body .menu-section .menu-section-heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 3px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+body .menu-section .menu-section-heading-3 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 48px;
+  letter-spacing: 0px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+body .menu-section .menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .menu-section .menu-wrapper .menu {
+  width: 40%;
+  padding-bottom: 80px;
+}
+
+body .menu-section .menu-wrapper .menu .menu-section-heading-6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 2px;
+  color: #414044;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body .menu-section .menu-wrapper .menu .menu-section-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #414044;
+  text-align: center;
+}
+
+body .menu-section .menu-section-bg {
+  position: relative;
+  background-image: url("../images/menu-section-bg.jpg");
+  min-height: 740px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .menu-section .menu-section-bg .menu-section-bg-wrapper {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  top: 120px;
+  right: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box {
+  width: 180px;
+  height: 200px;
+  background-color: #000;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-head svg {
+  width: 50px;
+  height: 50px;
+  fill: #fff;
+  display: block;
+  margin: 50px auto 20px;
+}
+
+body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-body > h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
 }
 /*# sourceMappingURL=global.css.map */

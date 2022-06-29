@@ -18,3 +18,11 @@
     color: $color;
     text-align: $align;
 }
+@mixin set-background-image ($url, $height, $position, $repeat, $size, $attachment){
+    background-image: $url;
+    min-height: $height;
+    background-position: $position;
+    background-repeat: $repeat;
+    background-size: $size;
+    background-attachment: $attachment;
+}
