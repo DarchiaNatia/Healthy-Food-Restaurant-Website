@@ -219,24 +219,41 @@ header {
             right: 70px;
             @include display-flex;
             .menu-section-cover-box {
+                position: relative;
                 width: 180px;
                 height: 200px;
-                background-color: #000;
-                opacity: 0.5;
                 margin-bottom: 20px;
-                .box-head {
-                    svg {
-                        width: 50px;
-                        height: 50px;
-                        fill: #fff;
-                        display: block;
-                        margin: 50px auto 20px;
+                cursor: pointer;
+                .transparent-box {
+                    position: absolute;
+                    background-color: #000;
+                    opacity: 0.5;
+                    width: 180px;
+                    height: 200px;
+                }
+                .box-elements {
+                    position: relative;
+                    padding-top: 40px;
+                    height: 100%;
+                    .box-head {
+                        .menu-box-svg {
+                            width: 50px;
+                            height: 50px;
+                            fill: #fff;
+                            display: block;
+                            margin: 0px auto 20px;
+                        }
+                    }
+                    .box-body {
+                        & > h6 {
+                            @include text-style($Open-Sans, $heading-6-size, normal, bold, $heading-6-size, 1px, #fff, center);
+                        }
+                    }
+                &:hover {
+                    .menu-box-svg {
+                        fill: $hover-color;
                     }
                 }
-                .box-body {
-                    & > h6 {
-                        @include text-style($Open-Sans, $heading-6-size, normal, bold, $heading-6-size, 1px, #fff, center);
-                    }
                 }
             }
         }
