@@ -46,6 +46,7 @@ header {
                 font-size: 36px;
                 margin-left: 50px;
                 color: $navigation-color;
+                cursor: pointer;
                 transition: 0.5s;
                 &:hover {
                     color: $navigation-hover;
@@ -259,10 +260,53 @@ header {
         }
     }
 }
-
-
-
-
+.events-section {
+    .events-section-heading {
+        @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+        margin-top: 90px;
+    }
+    .events-section-heading-3 {
+        @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
+        margin-top: 30px;
+    }
+    .events-section-box-wrapper {
+        margin: 70px auto;
+        width: 90%;
+        @include display-flex(row, space-around, center);
+        .events-box {
+            width: 33%;
+            height: 300px;
+            .events-box-heading {
+                @include text-style($Open-Sans, $heading-3-size, normal, bold, $heading-3-size, 3px, #000, center);
+                margin-bottom: 10px;
+            }
+            .events-box-heading-6 {
+                @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+                margin-bottom: 30px;
+            }
+            .box-textcontent {
+                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
+                width: 90%;
+                margin: 0px auto;
+            }
+        }
+    }
+    .events-read-more-btn {
+        width: 260px;
+        height: 60px;
+        text-transform: uppercase;
+        @include text-style($Open-Sans, 16px, normal, bold, 16px, 3px, #000, center);
+        background: none;
+        border: 2px solid #000;
+        cursor: pointer;
+        margin: 10px auto;
+        display: block;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
 
 
 }
