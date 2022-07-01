@@ -342,13 +342,20 @@ body .home-section .home-section-wrapper .section-main-information .info-details
 }
 
 body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn {
-  width: 110px;
+  width: 120px;
   height: 25px;
   background: none;
   border: none;
   border-bottom: 2px solid #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
   letter-spacing: 2px;
-  padding: 1px;
+  color: #000;
+  padding: 5px;
+  text-transform: uppercase;
   display: block;
   margin: 50px auto;
   cursor: pointer;
@@ -611,12 +618,180 @@ body .events-section .events-read-more-btn {
   background: none;
   border: 2px solid #000;
   cursor: pointer;
-  margin: 10px auto;
+  margin: 10px auto 100px;
   display: block;
 }
 
 body .events-section .events-read-more-btn:hover {
   background-color: #000;
   color: #fff;
+}
+
+body .health {
+  background-color: #f2f2f2;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+body .health .suggestion-div {
+  width: 85%;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .health .suggestion-div .suggestion-text {
+  width: 40%;
+  margin-top: 60px;
+}
+
+body .health .suggestion-div .suggestion-text .suggestion-text-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+body .health .suggestion-div .suggestion-text .text-pragraph-1, body .health .suggestion-div .suggestion-text .text-pragraph-2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #414044;
+  text-align: left;
+  width: 85%;
+  margin-bottom: 30px;
+}
+
+body .health .suggestion-div .suggestion-text .read-more-button {
+  width: 120px;
+  height: 25px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #414044;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #414044;
+  text-transform: uppercase;
+  padding: 5px;
+  cursor: pointer;
+}
+
+body .health .suggestion-div .suggestion-text .read-more-button:hover {
+  border-bottom: 2px solid #a59797;
+  color: #a59797;
+}
+
+body .health .suggestion-div .suggestion-img {
+  width: 50%;
+}
+
+body .health .suggestion-div .suggestion-img > img {
+  width: 100%;
+  height: 540px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .health .health-section-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 85%;
+  margin: 120px auto 0px;
+}
+
+body .health .health-section-reviews .section-reviews-img {
+  width: 50%;
+}
+
+body .health .health-section-reviews .section-reviews-img > img {
+  width: 100%;
+  height: 585px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .health .health-section-reviews .health-section-reviews-text {
+  width: 40%;
+}
+
+body .health .health-section-reviews .health-section-reviews-text > h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 3px;
+  color: #000;
+  text-align: left;
+  margin-top: 60px;
+}
+
+body .health .health-section-reviews .health-section-reviews-text > h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #000;
+  text-align: left;
+  margin-top: 30px;
+}
+
+body .health .health-section-reviews .health-section-reviews-text > i {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 30px;
+}
+
+body .health .health-section-reviews .health-section-reviews-text > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #414044;
+  text-align: left;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=global.css.map */

@@ -163,13 +163,14 @@ header {
                     margin: 0px auto;
                 }
                 .info-details-btn {
-                    width: 110px;
+                    width: 120px;
                     height: 25px;
                     background: none;
                     border: none;
                     border-bottom: 2px solid #000;
-                    letter-spacing: 2px;
-                    padding: 1px;
+                    @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, #000, null);
+                    padding: 5px;
+                    text-transform: uppercase;
                     display: block;
                     margin: 50px auto;
                     cursor: pointer;
@@ -299,11 +300,92 @@ header {
         background: none;
         border: 2px solid #000;
         cursor: pointer;
-        margin: 10px auto;
+        margin: 10px auto 100px;
         display: block;
         &:hover {
             background-color: #000;
             color: #fff;
+        }
+    }
+}
+// end of Events Section
+.health {
+    background-color: $menu-section-bg;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    .suggestion-div {
+        width: 85%;
+        margin: 0px auto;
+        @include display-flex;
+        .suggestion-text {
+            width: 40%;
+            margin-top: 60px;
+            .suggestion-text-heading {
+                @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
+                margin-bottom: 20px;
+            }
+            .text-pragraph-1, .text-pragraph-2 {
+                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
+                width: 85%;
+                margin-bottom: 30px;
+            }
+            .read-more-button {
+                width: 120px;
+                    height: 25px;
+                    background: none;
+                    border: none;
+                    border-bottom: 2px solid $menu-section-text-color;
+                    @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
+                    text-transform: uppercase;
+                    padding: 5px;
+                    cursor: pointer;
+                 &:hover {
+                    border-bottom: 2px solid $hover-color;
+                    color: $hover-color;
+                }
+            }
+        }
+        .suggestion-img {
+           width: 50%;
+            & > img {
+                width: 100%;
+                height: 540px;
+                object-fit: cover;
+            }
+        }
+    }
+    .health-section-reviews {
+        @include display-flex (row, space-between, start);
+        width: 85%;
+        margin: 120px auto 0px;
+        .section-reviews-img {
+            width: 50%;
+            & > img {
+                width: 100%;
+                height: 585px;
+                object-fit: cover;
+            }
+        }
+        .health-section-reviews-text {
+            width: 40%;
+            & > h6 {
+                @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, left);
+                margin-top: 60px;
+            }
+            & > h3 {
+                @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
+                margin-top: 30px;
+            }
+            & > i {
+                font-size: 48px;
+                font-weight: bold;
+                color: #000;
+                margin-top: 30px;
+            }
+            & > p {
+                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
+                margin-top: 20px;
+            }
         }
     }
 }
