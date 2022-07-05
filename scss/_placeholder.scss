@@ -1,0 +1,17 @@
+%container {
+    max-width: $container-size-x-lg;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
+}
+
+.button-basic {
+    background: none;
+    border: none;
+    padding: 5px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
