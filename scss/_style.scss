@@ -478,4 +478,66 @@ header {
         grid-row: span 2;
     }
 }
+// end of Image Grid Section
+.everyday-cook-section {
+    .cooking-section-wrapper {
+        width: 80%;
+        margin: 150px auto;
+        @include display-flex(row, space-around, center);
+        .main-dish, .garnish, .desserts {
+            @include display-flex(column, center, center);
+            .cooking-section-svg {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 30px;
+            }
+        & > h3 {
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
+            margin-bottom: 30px;
+        } 
+        & > h6 {
+            @include text-style($Open-Sans, $heading-6-size, normal, 400, 22px, 4px, #000, center);
+            text-transform: uppercase;
+        }   
+        }
+        .everyday-cook {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #000;
+            & > h6 {
+                @include text-style($Open-Sans, $heading-6-size, normal, 500, 22px, 3px, #fff, center);
+                text-transform: uppercase;
+                width: 120px;
+                margin: 100px auto;
+            }
+        } 
+    }
+}
+// end of section
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: $footer-bg-color;
+    .social-network-div {
+        @include display-flex(row, center, center);
+        padding: 20px;
+        & > a {
+            margin: 20px;
+            color: #fff;
+            font-size: 24px;
+            &:hover {
+                color: rgb(84, 84, 230);
+            }
+        }
+    }
+    .footer-content {
+        & > p {
+            @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, #fff, center);
+            width: 40%;
+            margin: 10px auto;
+        }
+    }
+}
 }

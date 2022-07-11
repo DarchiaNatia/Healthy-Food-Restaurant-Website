@@ -944,4 +944,140 @@ body .image-grid-section .image-grid-column-2 {
 body .image-grid-section .image-grid-row-2 {
   grid-row: span 2;
 }
+
+body .everyday-cook-section .cooking-section-wrapper {
+  width: 80%;
+  margin: 150px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-cook-section .cooking-section-wrapper .garnish, body .everyday-cook-section .cooking-section-wrapper .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .everyday-cook-section .cooking-section-wrapper .main-dish .cooking-section-svg, body .everyday-cook-section .cooking-section-wrapper .garnish .cooking-section-svg, body .everyday-cook-section .cooking-section-wrapper .desserts .cooking-section-svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+body .everyday-cook-section .cooking-section-wrapper .main-dish > h3, body .everyday-cook-section .cooking-section-wrapper .garnish > h3, body .everyday-cook-section .cooking-section-wrapper .desserts > h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+body .everyday-cook-section .cooking-section-wrapper .main-dish > h6, body .everyday-cook-section .cooking-section-wrapper .garnish > h6, body .everyday-cook-section .cooking-section-wrapper .desserts > h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 4px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body .everyday-cook-section .cooking-section-wrapper .everyday-cook {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+body .everyday-cook-section .cooking-section-wrapper .everyday-cook > h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  width: 120px;
+  margin: 100px auto;
+}
+
+body footer {
+  width: 100%;
+  height: 250px;
+  background-color: #333333;
+}
+
+body footer .social-network-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+body footer .social-network-div > a {
+  margin: 20px;
+  color: #fff;
+  font-size: 24px;
+}
+
+body footer .social-network-div > a:hover {
+  color: #5454e6;
+}
+
+body footer .footer-content > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: center;
+  width: 40%;
+  margin: 10px auto;
+}
 /*# sourceMappingURL=global.css.map */
