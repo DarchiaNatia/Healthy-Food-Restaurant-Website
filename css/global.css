@@ -61,7 +61,7 @@ a {
   text-decoration: none;
 }
 
-.button-basic, body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn, body .events-section .events-read-more-btn, body .health .suggestion-div .suggestion-text .read-more-button {
+.button-basic, body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn, body .health .suggestion-div .suggestion-text .read-more-button, body .slider-section .slider-readMore-btn {
   background: none;
   border: none;
   padding: 5px 2px;
@@ -350,7 +350,6 @@ body .home-section .home-section-wrapper .section-main-information .info-details
 }
 
 body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn {
-  border-bottom: 2px solid #000;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -358,6 +357,7 @@ body .home-section .home-section-wrapper .section-main-information .info-details
   line-height: 16px;
   letter-spacing: 2px;
   color: #000;
+  border-bottom: 2px solid #000;
   display: block;
   margin: 50px auto;
 }
@@ -409,17 +409,19 @@ body .menu-section .menu-wrapper {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 80%;
+  margin: 20px auto;
 }
 
-body .menu-section .menu-wrapper .menu {
+body .menu-section .menu-wrapper .menu-div {
   width: 40%;
   padding-bottom: 80px;
 }
 
-body .menu-section .menu-wrapper .menu .menu-section-heading-6 {
+body .menu-section .menu-wrapper .menu-div .menu-section-h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -431,7 +433,7 @@ body .menu-section .menu-wrapper .menu .menu-section-heading-6 {
   margin-bottom: 20px;
 }
 
-body .menu-section .menu-wrapper .menu .menu-section-text {
+body .menu-section .menu-wrapper .menu-div .dish-ingredients {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -519,7 +521,7 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   fill: #a59797;
 }
 
-body .events-section .events-section-heading {
+body .events-section .section-wrapper .events-section-heading {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -531,7 +533,7 @@ body .events-section .events-section-heading {
   margin-top: 90px;
 }
 
-body .events-section .events-section-heading-3 {
+body .events-section .section-wrapper .events-section-heading-3 {
   font-family: "Playfair Display", serif;
   font-size: 48px;
   font-style: normal;
@@ -543,8 +545,8 @@ body .events-section .events-section-heading-3 {
   margin-top: 30px;
 }
 
-body .events-section .events-section-box-wrapper {
-  margin: 70px auto;
+body .events-section .section-wrapper .events-wrapper {
+  margin: 40px auto;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,12 +564,13 @@ body .events-section .events-section-box-wrapper {
           align-items: center;
 }
 
-body .events-section .events-section-box-wrapper .events-box {
-  width: 33%;
+body .events-section .section-wrapper .events-wrapper .events {
+  width: 320px;
   height: 300px;
+  margin-top: 40px;
 }
 
-body .events-section .events-section-box-wrapper .events-box .events-box-heading {
+body .events-section .section-wrapper .events-wrapper .events .event-day {
   font-family: "Open Sans", sans-serif;
   font-size: 48px;
   font-style: normal;
@@ -579,7 +582,7 @@ body .events-section .events-section-box-wrapper .events-box .events-box-heading
   margin-bottom: 10px;
 }
 
-body .events-section .events-section-box-wrapper .events-box .events-box-heading-6 {
+body .events-section .section-wrapper .events-wrapper .events .event-month {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -588,10 +591,11 @@ body .events-section .events-section-box-wrapper .events-box .events-box-heading
   letter-spacing: 3px;
   color: #000;
   text-align: center;
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 
-body .events-section .events-section-box-wrapper .events-box .box-textcontent {
+body .events-section .section-wrapper .events-wrapper .events .event-description {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -604,25 +608,32 @@ body .events-section .events-section-box-wrapper .events-box .box-textcontent {
   margin: 0px auto;
 }
 
-body .events-section .events-read-more-btn {
-  width: 260px;
-  height: 60px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 16px;
-  letter-spacing: 3px;
-  color: #000;
-  text-align: center;
-  border: 2px solid #000;
-  display: block;
-  margin: 10px auto 100px;
+body .events-section .section-wrapper .load-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .events-section .events-read-more-btn:hover {
-  background-color: #000;
-  color: #fff;
+body .events-section .section-wrapper .load-buttons .load-previews-btn {
+  display: none;
+}
+
+body .events-section .section-wrapper .load-buttons .load-more-btn, body .events-section .section-wrapper .load-buttons .load-previews-btn {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 30px;
 }
 
 body .health {
@@ -682,7 +693,6 @@ body .health .suggestion-div .suggestion-text .text-pragraph-1, body .health .su
 }
 
 body .health .suggestion-div .suggestion-text .read-more-button {
-  border-bottom: 2px solid #414044;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -690,6 +700,7 @@ body .health .suggestion-div .suggestion-text .read-more-button {
   line-height: 16px;
   letter-spacing: 2px;
   color: #414044;
+  border-bottom: 2px solid #414044;
 }
 
 body .health .suggestion-div .suggestion-text .read-more-button:hover {
@@ -808,5 +819,102 @@ body .slider-section .slider-section-text {
   color: #414044;
   text-align: center;
   margin-top: 20px;
+}
+
+body .slider-section .slider-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+body .slider-section .slider-wrapper .arrow-btn {
+  position: absolute;
+  font-size: 50px;
+  cursor: pointer;
+  top: 40%;
+}
+
+body .slider-section .slider-wrapper .arrow-btn:hover {
+  opacity: 0.6;
+}
+
+body .slider-section .slider-wrapper .arrow-left {
+  left: 50px;
+}
+
+body .slider-section .slider-wrapper .arrow-right {
+  right: 50px;
+}
+
+body .slider-section .slider-wrapper .slider-content {
+  width: 75%;
+  margin: 70px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .slider-section .slider-wrapper .slider-content .slider-image {
+  width: 310px;
+  height: 360px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .slider-section .slider-wrapper .slider-content .slider-image:hover {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+body .slider-section .slider-wrapper .slider-content .dots-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+}
+
+body .slider-section .slider-wrapper .slider-content .sliderDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #b3b3b3;
+  margin: 5px;
+  cursor: pointer;
+}
+
+body .slider-section .slider-wrapper .slider-content .sliderDot.active {
+  background-color: yellow;
+}
+
+body .slider-section .slider-readMore-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #414044;
+  border-bottom: 2px solid #414044;
+  display: block;
+  margin: 40px auto;
+}
+
+body .slider-section .slider-readMore-btn:hover {
+  border-bottom: 2px solid #a59797;
+  color: #a59797;
 }
 /*# sourceMappingURL=global.css.map */

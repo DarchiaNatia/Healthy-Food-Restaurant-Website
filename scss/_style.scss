@@ -164,8 +164,8 @@ header {
                 }
                 .info-details-btn {
                     @extend .button-basic;
-                    border-bottom: 2px solid #000;
                     @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, #000, null);
+                    border-bottom: 2px solid #000;
                     display: block;
                     margin: 50px auto;
                  &:hover {
@@ -191,16 +191,19 @@ header {
         margin-bottom: 50px;
     }
     .menu-wrapper {
-        @include display-flex(row, space-around, center);
-        .menu {
+        @include display-flex(row, space-around, start);
+        width: 80%;
+        margin: 20px auto;
+        .menu-div {
             width: 40%;
             padding-bottom: 80px;
-            .menu-section-heading-6 {
+            .menu-section-h6 {
                 @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 2px, $menu-section-text-color, center);
                 margin-bottom: 20px;
             }
-            .menu-section-text {
+            .dish-ingredients {
                 @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
+
             }
         }
     }
@@ -255,50 +258,53 @@ header {
         }
     }
 }
+// Events Section
 .events-section {
-    .events-section-heading {
-        @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
-        margin-top: 90px;
-    }
-    .events-section-heading-3 {
-        @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
-        margin-top: 30px;
-    }
-    .events-section-box-wrapper {
-        margin: 70px auto;
-        width: 90%;
-        @include display-flex(row, space-around, center);
-        .events-box {
-            width: 33%;
-            height: 300px;
-            .events-box-heading {
-                @include text-style($Open-Sans, $heading-3-size, normal, bold, $heading-3-size, 3px, #000, center);
-                margin-bottom: 10px;
-            }
-            .events-box-heading-6 {
-                @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
-                margin-bottom: 30px;
-            }
-            .box-textcontent {
-                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
-                width: 90%;
-                margin: 0px auto;
+    .section-wrapper {
+        .events-section-heading {
+            @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+            margin-top: 90px;
+        }
+        .events-section-heading-3 {
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
+            margin-top: 30px;
+        }
+        .events-wrapper {
+            margin: 40px auto;
+            width: 90%;
+            @include display-flex(row, space-around, center);
+            .events {
+                width: 320px;
+                height: 300px;
+                margin-top: 40px;
+                .event-day {
+                    @include text-style($Open-Sans, $heading-3-size, normal, bold, $heading-3-size, 3px, #000, center);
+                    margin-bottom: 10px;
+                }
+                .event-month {
+                    @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+                }
+                .event-description {
+                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
+                    width: 90%;
+                    margin: 0px auto;
+                }
             }
         }
-    }
-    .events-read-more-btn {
-        @extend .button-basic;
-        width: 260px;
-        height: 60px;
-        @include text-style($Open-Sans, 16px, normal, bold, 16px, 3px, #000, center);
-        border: 2px solid #000;
-        display: block;
-        margin: 10px auto 100px;
-        &:hover {
-            background-color: #000;
-            color: #fff;
+        .load-buttons {
+            @include display-flex (row, center, center);
+            .load-previews-btn {
+                display: none;
+            }
+            .load-more-btn, .load-previews-btn {
+                font-size: 24px;
+                cursor: pointer;
+                margin: 30px;
+            }
         }
-    }
+    }   
 }
 // end of Events Section
 .health {
@@ -323,8 +329,8 @@ header {
             }
             .read-more-button {
                 @extend .button-basic;
-                border-bottom: 2px solid $menu-section-text-color;
                 @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
+                border-bottom: 2px solid $menu-section-text-color;
                 &:hover {
                 border-bottom: 2px solid $hover-color;
                 color: $hover-color;
@@ -384,6 +390,68 @@ header {
     .slider-section-text {
         @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
         margin-top: 20px;
+    }
+    .slider-wrapper {
+        position: relative;
+        height: 400px;
+        .arrow-btn {
+            position: absolute;
+            font-size: 50px;
+            cursor: pointer;
+            top: 40%;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .arrow-left {
+            left: 50px;
+        }
+        .arrow-right {
+            right: 50px;
+        }
+        .slider-content {
+            width: 75%;
+            margin: 70px auto;
+            @include display-flex (row, space-around, center);
+            .slider-image {
+                width: 310px;
+                height: 360px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                @include transition-ease-in-out;
+                &:hover {
+                    filter: brightness(70%);
+                }
+            }
+            .dots-wrapper {
+                display: flex;
+                position: absolute;
+                left: 50%;
+                bottom: 5px;
+            }
+            .sliderDot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $dots-color;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .sliderDot.active {
+                background-color: yellow;
+            }
+        }
+    }
+    .slider-readMore-btn {
+        @extend .button-basic;
+            @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
+            border-bottom: 2px solid $menu-section-text-color;
+            display: block;
+            margin: 40px auto;
+            &:hover {
+            border-bottom: 2px solid $hover-color;
+            color: $hover-color;
+        }
     }
 }
 

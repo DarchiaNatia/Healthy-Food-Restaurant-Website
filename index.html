@@ -97,32 +97,8 @@
 <section class="menu-section">
     <h6 class="menu-section-heading">our menu</h6>
     <h3 class="menu-section-heading-3">Delicious From The Chef</h3>
-    <div class="menu-wrapper">
-        <div class="menu">
-            <h6 class="menu-section-heading-6">PEAR SALAD / $11</h6>
-            <p class="menu-section-text">Reid’s Orchard Pears / Bitter Greens / Granola / Big Firefly / Farms Black and Blue / Pine Nut Vinaigrette</p>
-        </div>
-        <div class="menu">
-            <h6 class="menu-section-heading-6">BRODETTO DI PESCE / $9</h6>
-            <p class="menu-section-text">Adriatic Seafood Soup / Clams / Prawns / Livornese / Langoustine Scallop / Celery / Olive</p>
-        </div>
-        <div class="menu">
-            <h6 class="menu-section-heading-6">FARM GREENS / $9</h6>
-            <p class="menu-section-text">Honey Vinaigrette / House Cheese Crouton / Fine Herbs</p>
-        </div>
-        <div class="menu">
-            <h6 class="menu-section-heading-6">GRILLED KALE / $9</h6>
-            <p class="menu-section-text">Bitter Greens / House Cheese Crouton / Kamon Iberico</p>
-        </div>
-        <div class="menu">
-            <h6 class="menu-section-heading-6">RICOTTA GNUD / $18</h6>
-            <p class="menu-section-text">Marinated Sardine / Red Currant / Chanterelles / Pine Nuts / Mantecato Vitello / Fennel / Olive / Pepitas</p>
-        </div>
-        <div class="menu">
-            <h6 class="menu-section-heading-6">CANESTRELLI / $18</h6>
-            <p class="menu-section-text">Reid Orchatd Pears / Bitter Greens / House Cheese Crouton / Marinated Sardine / Chanterelles / Clams</p>
-        </div>
-    </div>
+    <div class="menu-wrapper" id="menuWrapper"></div>
+
     <div class="menu-section-bg">
         <div class="menu-section-bg-wrapper">
             <div class="menu-section-cover-box">
@@ -200,30 +176,14 @@
 </section>
 <!-- end of Menu Section -->
 <section class="events-section">
-    <div class="events-section-wrapper">
+    <div class="section-wrapper">
         <h6 class="events-section-heading">EVENTS</h6>
         <h3 class="events-section-heading-3">Events of Healthy Food</h3>
-        <div class="events-section-box-wrapper">
-            <div class="events-box">
-                <h3 class="events-box-heading">25</h3>
-                <h6 class="events-box-heading-6">APRIL</h6>
-                <p class="box-textcontent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, vitae eaque consequatur a ipsam, architecto provident blanditiis doloremque, eligendi aut quos eos expedita consequuntur. 
-                Possimus explicabo repudiandae amet necessitatibus impedit.</p>
-            </div>
-            <div class="events-box">
-                <h3 class="events-box-heading">15</h3>
-                <h6 class="events-box-heading-6">MAY</h6>
-                <p class="box-textcontent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, vitae eaque consequatur a ipsam, architecto provident blanditiis doloremque, eligendi aut quos eos expedita consequuntur. 
-                Possimus explicabo repudiandae amet necessitatibus impedit.</p>
-            </div>
-            <div class="events-box">
-                <h3 class="events-box-heading">19</h3>
-                <h6 class="events-box-heading-6">JUNE</h6>
-                <p class="box-textcontent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, vitae eaque consequatur a ipsam, architecto provident blanditiis doloremque, eligendi aut quos eos expedita consequuntur. 
-                Possimus explicabo repudiandae amet necessitatibus impedit.</p>
-            </div>
+        <div class="events-wrapper" id="eventsWrapper"></div>
+        <div class="load-buttons">
+            <i class="fa-solid fa-angles-left load-previews-btn" id="previewsBtn"></i>
+            <i class="fa-solid fa-angles-right load-more-btn" id="loadMoreBtn"></i>
         </div>
-        <button class="events-read-more-btn">read more</button>
     </div>
 </section>
 <!-- Healthy Section -->
@@ -260,8 +220,12 @@
 <section class="slider-section">
     <h2 class="slider-section-heading">Learn Cooking Online</h2>
     <p class="slider-section-text">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-    
-
+    <div class="slider-wrapper">
+        <i class="arrow-btn arrow-left fa-solid fa-circle-chevron-left" id="leftArrow"></i>
+        <i class="arrow-btn arrow-right fa-solid fa-circle-chevron-right" id="rightArrow"></i>
+        <div class="slider-content" id="sliderContent"></div>
+    </div>
+    <button class="slider-readMore-btn">read more</button>   
 </section>
 
 
