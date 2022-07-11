@@ -454,6 +454,28 @@ header {
         }
     }
 }
+// end of Slider Section
+.image-grid-section {
+    .image-grid {
+        width: 85%;
+        margin: 70px auto;
+        padding: $image-grid-gap;
+        display: grid;
+        grid-template-columns: repeat($image-grid-num-cols, 1fr);
+        grid-auto-rows: $image-grid-row-height;
+        gap: $image-grid-gap;
 
-
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .image-grid-column-2 {
+        grid-column: span 2;
+    }
+    .image-grid-row-2 {
+        grid-row: span 2;
+    }
+}
 }

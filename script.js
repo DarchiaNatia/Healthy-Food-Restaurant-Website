@@ -298,9 +298,10 @@ function createDots(item) {
 
         dot.addEventListener('click', event => {
             sliderIndex = slidetCount*i;
-            dot.classList.add('active');
+            dot.style.backgroundColor = "red";
+            // dot.classList.add('active');
             setSlide();
-            console.log('is active');
+            console.log(dot.style.backgroundColor);
         });
         dotsWrapper.appendChild(dot);
     }
