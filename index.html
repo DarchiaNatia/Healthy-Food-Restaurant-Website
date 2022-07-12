@@ -357,9 +357,55 @@
         <div class="everyday-cook"><h6>we cook everyday</h6></div>
     </div>
 </section>
-<!-- end of section -->
-
-
+<!-- Contact Us Section -->
+<section class="contactUs-section">
+    <h6 class="contactUs-section-heading">contact us</h6>
+    <h3 class="contactUs-section-h3">Get in touch</h3>
+    <div class="form-wrapper">
+        <form class="registration-form" id="registrationForm" action="" method="post">
+            <div class="fullName-inputs-wrapper">
+                <div class="fName-div">
+                    <input class="registration-inputs" type="text" name="fName" id="fName" placeholder="Enter your First Name">
+                    <span class="error-text" id="error_fName"></span>
+                </div>
+                <div class="lName-div">
+                    <input class="registration-inputs" type="text" name="lName" id="lName" placeholder="Enter your Last Name">
+                    <span class="error-text" id="error_lNmae"></span>
+                </div>
+            </div>
+            <div class="email-div">
+                <input class="registration-inputs" type="email" name="email" id="email" placeholder="Enter a valid email address">
+                <span class="error-text" id="error_email"></span>
+            </div>
+            <div class="password-div">
+                <input class="registration-inputs" type="password" name="password" id="password" placeholder="Enter your password">
+                <i class="fa-solid fa-eye show-hide-password"></i>
+                <span class="error-text" id="error_password"></span>
+            </div>
+            <div class="repeat-password-div">
+                <input class="registration-inputs" type="password" name="repeat_password" id="repeat-password" placeholder="Please, repeat your password">
+                <span class="error-text" id="error_repeat_password"></span>
+            </div>
+            <div class="terms-and-conditions-div">
+                <div class="check-box">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label class="input-labeles" for="agree">I accept the <span style="color: #478ac9">Terms of Service</span></label>
+                    <span class="error-text" id="error_agree"></span>
+                </div>
+                <div class="radio-buttons">
+                    <h6 class="radio-btns-title">Are you familiar with our services?</h6>
+                    <input type="radio" name="question" id="yes">
+                    <label class="input-labeles" for="yes">Yes</label>
+                    <input type="radio" name="question" id="no">
+                    <label class="input-labeles" for="no">No</label>
+                    <span class="error-text" id="error_question"></span>
+                </div>
+            </div>
+            <button class="registration-submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+<!-- Footer Section -->
 <footer>
     <div class="social-network-div">
         <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>

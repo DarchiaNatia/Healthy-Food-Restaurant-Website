@@ -492,7 +492,7 @@ header {
                 margin-bottom: 30px;
             }
         & > h3 {
-            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
             margin-bottom: 30px;
         } 
         & > h6 {
@@ -514,8 +514,82 @@ header {
         } 
     }
 }
-// end of section
-
+// Contact Us Section
+.contactUs-section {
+    .contactUs-section-heading {
+        @include text-style($Open-Sans, $heading-6-size, normal, 500, 22px, 3px, #000, center);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .contactUs-section-h3 {
+        @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
+        margin-bottom: 40px;
+    }
+    .form-wrapper {
+        width: 45%;
+        margin: 0px auto 50px; 
+        .registration-form {
+            .registration-inputs {
+                width: 100%;
+                height: 100%;
+                border: solid 1px $form-border-color;
+                padding: 8px;
+                cursor: pointer;
+                &::placeholder {
+                    @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                }
+            }
+            .input-labeles {
+                @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $input-labels-text-color, left);
+            }
+            .fullName-inputs-wrapper {
+                @include display-flex;
+                .fName-div, .lName-div {
+                    width: 48%;
+                    height: 50px;
+                }
+            }
+            .email-div, .password-div, .repeat-password-div {
+                width: 100%;
+                height: 50px;
+                margin-top: 10px;
+            }
+            .password-div {
+                position: relative;
+            }
+            .show-hide-password {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                color: rgb(26, 25, 25);
+            }
+            .terms-and-conditions-div {
+                @include display-flex(row, space-between, top);
+                .radio-buttons, .check-box {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .radio-btns-title {
+                    @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 0px, $input-labels-text-color, left);
+                    margin-bottom: 10px;
+                }
+            }
+            .registration-submit-button {
+                @extend .button-basic;
+                @include text-style($Open-Sans, $btn-text-size, normal, bold, 16px, 2px, #000, null);
+                border: 2px solid #000;
+                padding: 15px 30px;
+                display: block;
+                margin: 50px auto 70px;
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+// Footer Section
 footer {
     width: 100%;
     height: 250px;
@@ -528,7 +602,7 @@ footer {
             color: #fff;
             font-size: 24px;
             &:hover {
-                color: rgb(84, 84, 230);
+                color: $social-network-hover-color;
             }
         }
     }

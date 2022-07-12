@@ -61,7 +61,7 @@ a {
   text-decoration: none;
 }
 
-.button-basic, body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn, body .health .suggestion-div .suggestion-text .read-more-button, body .slider-section .slider-readMore-btn {
+.button-basic, body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn, body .health .suggestion-div .suggestion-text .read-more-button, body .slider-section .slider-readMore-btn, body .contactUs-section .form-wrapper .registration-form .registration-submit-button {
   background: none;
   border: none;
   padding: 5px 2px;
@@ -996,7 +996,7 @@ body .everyday-cook-section .cooking-section-wrapper .main-dish > h3, body .ever
   line-height: 55px;
   letter-spacing: 0px;
   color: #000;
-  text-align: left;
+  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -1033,6 +1033,193 @@ body .everyday-cook-section .cooking-section-wrapper .everyday-cook > h6 {
   margin: 100px auto;
 }
 
+body .contactUs-section .contactUs-section-heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 3px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+body .contactUs-section .contactUs-section-h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+body .contactUs-section .form-wrapper {
+  width: 45%;
+  margin: 0px auto 50px;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-inputs {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #b9b9b9;
+  padding: 8px;
+  cursor: pointer;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-inputs::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #888888;
+  text-align: left;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-inputs:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #888888;
+  text-align: left;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-inputs::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #888888;
+  text-align: left;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-inputs::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #888888;
+  text-align: left;
+}
+
+body .contactUs-section .form-wrapper .registration-form .input-labeles {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #1a1919;
+  text-align: left;
+}
+
+body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper .fName-div, body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper .lName-div {
+  width: 48%;
+  height: 50px;
+}
+
+body .contactUs-section .form-wrapper .registration-form .email-div, body .contactUs-section .form-wrapper .registration-form .password-div, body .contactUs-section .form-wrapper .registration-form .repeat-password-div {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+body .contactUs-section .form-wrapper .registration-form .password-div {
+  position: relative;
+}
+
+body .contactUs-section .form-wrapper .registration-form .show-hide-password {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #1a1919;
+}
+
+body .contactUs-section .form-wrapper .registration-form .terms-and-conditions-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+}
+
+body .contactUs-section .form-wrapper .registration-form .terms-and-conditions-div .radio-buttons, body .contactUs-section .form-wrapper .registration-form .terms-and-conditions-div .check-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body .contactUs-section .form-wrapper .registration-form .terms-and-conditions-div .radio-btns-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0px;
+  color: #1a1919;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-submit-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #000;
+  border: 2px solid #000;
+  padding: 15px 30px;
+  display: block;
+  margin: 50px auto 70px;
+}
+
+body .contactUs-section .form-wrapper .registration-form .registration-submit-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 body footer {
   width: 100%;
   height: 250px;
@@ -1065,7 +1252,7 @@ body footer .social-network-div > a {
 }
 
 body footer .social-network-div > a:hover {
-  color: #5454e6;
+  color: #5593cd;
 }
 
 body footer .footer-content > p {
