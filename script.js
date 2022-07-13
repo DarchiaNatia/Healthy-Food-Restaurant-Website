@@ -314,6 +314,9 @@ setTimeout(function() {
 
 // Contact Us Section
 let registrationForm = document.getElementById('registrationForm');
+let emailInput = document.getElementById('email');
+let passwordInput = document.getElementById('password');
+let hideShowPassIcon = document.getElementById('show-hide-password');
 let errors = {};
 
 registrationForm.addEventListener('submit', function(event) {
@@ -369,7 +372,6 @@ registrationForm.addEventListener('submit', function(event) {
 
 function emailValidate () {
     let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    let emailInput = document.getElementById('email');
     let email = document.getElementById('email').value;
     let emailSpan = document.getElementById('error_email');
 
@@ -384,6 +386,18 @@ function emailValidate () {
         emailSpan.style.color = 'rgb(218, 61, 61)';
         emailInput.style.outline = 'none';
         emailInput.style.borderColor = 'rgb(218, 61, 61)';
-    }
-    
+    }  
 }
+function showHidePassword () {
+    if(passwordInput.type == 'password') {
+        passwordInput.setAttribute('type', 'text');
+        hideShowPassIcon.classList.add('fa-eye');
+        hideShowPassIcon.classList.remove('fa-eye-slash');
+    }
+    else {
+        passwordInput.setAttribute('type', 'password');
+        hideShowPassIcon.classList.add('fa-eye-slash');
+        hideShowPassIcon.classList.remove('fa-eye');
+    }
+}
+hideShowPassIcon.addEventListener('click', showHidePassword);
