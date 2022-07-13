@@ -128,6 +128,9 @@ let sliderData = [
     }
 ];
 
+let dots = createDots();
+sliderContent.appendChild(dots);
+
 // Header Section methods
 burgerBtn.addEventListener('click', function(){
     openNavigation();
@@ -196,22 +199,6 @@ function createEvents() {
         }
     }
     eventsData.forEach((element) => {
-        // let events = document.createElement('div');
-        // events.classList.add("events");
-        // let eventDay = document.createElement('h3');
-        // eventDay.classList.add("event-day");
-        // eventDay.textContent = element.day;
-        // let eventMonth = document.createElement('h6');
-        // eventMonth.classList.add("event-month");
-        // eventMonth.textContent = element.month;
-        // let eventDescription = document.createElement('p');
-        // eventDescription.classList.add("event-description");
-        // eventDescription.textContent = element.description;
-
-        // events.appendChild(eventDay);
-        // events.appendChild(eventMonth);
-        // events.appendChild(eventDescription);
-        // fragment.appendChild(events);
     });
     eventsWrapper.appendChild(fragment);
     eventItems = document.querySelectorAll('.events');
@@ -219,15 +206,6 @@ function createEvents() {
 createEvents();
 
 loadMoreBtn.addEventListener('click', (item) => {
-    
-    // let eventsList = document.querySelectorAll(".events-wrapper .events");
-    // console.log(eventsList);
-    // for(let i = 0; i < 3; i++) {
-    //     if(eventsList[i]) {
-    //         eventsList[i].style.display = "block";
-    //     }
-    //     console.log(eventsList[i]);
-    // }
     currentEventStart++;
     if (currentEventStart*currentItems+currentItems >= eventsData.length) {
         loadMoreBtn.style.display = "none";
@@ -264,29 +242,39 @@ function createSliderImage(item) {
 
     return sliderImage
 }
-function sliderArrowRightClick() {
-    // if(sliderIndex == (sliderData.length/3)-1) {
-    if(sliderIndex == sliderData.length-slidetCount) {
-        sliderIndex = 0;
-        setSlide();
-        return;
+function sliderArrowRightClick(auto) {
+    if (auto) {
+        setTimeout(function() {
+            sliderArrowRightClick(true);
+        }, 4000);
     }
-    sliderIndex++;
+    if(sliderIndex >= sliderData.length-3) {
+        sliderIndex = 0;
+    } else {
+        sliderIndex+=3;
+    }
+    activeDot(document.querySelector('.sliderDot:nth-child(' + (sliderIndex/3+1) + ')'));
     setSlide();
 }
-sliderRightArrow.addEventListener('click', sliderArrowRightClick);
+sliderRightArrow.addEventListener('click', function() {
+    sliderArrowRightClick(false);
+});
 
 function sliderArrowLeftClick() {
     if(sliderIndex == 0) {
-        // sliderIndex = (sliderData.length/3)-1;
-        sliderIndex = sliderData.length-slidetCount;
-        setSlide();
-        return;
+        sliderIndex = sliderData.length-3;
+    } else {
+        sliderIndex-=3;
     }
-    sliderIndex--;
+    activeDot(document.querySelector('.sliderDot:nth-child(' + (sliderIndex/3+1) + ')'));
     setSlide();
 }
 sliderLeftArrow.addEventListener('click', sliderArrowLeftClick);
+
+function activeDot(el) {
+    document.querySelector('.sliderDot.active').classList.remove("active");
+    el.classList.add("active");
+}
 
 function createDots(item) {
     let dotsWrapper = document.createElement('div');
@@ -296,12 +284,13 @@ function createDots(item) {
         let dot = document.createElement('div');
         dot.classList.add('sliderDot');
 
+        if (i == 0) {
+            dot.classList.add('active');
+        }
         dot.addEventListener('click', event => {
             sliderIndex = slidetCount*i;
-            dot.style.backgroundColor = "red";
-            // dot.classList.add('active');
+            activeDot(event.target);
             setSlide();
-            console.log(dot.style.backgroundColor);
         });
         dotsWrapper.appendChild(dot);
     }
@@ -309,13 +298,92 @@ function createDots(item) {
 }
 
 function setSlide() {
-    sliderContent.innerHTML = "";
-    // for (let i = sliderIndex*3; i < 3*(sliderIndex+1); i++) {
+    Array.from(sliderContent.getElementsByClassName('slider-image')).forEach(element => {
+        element.remove();
+    });
     for (let i = sliderIndex; i < sliderIndex+slidetCount; i++) {
         let sliderImg = createSliderImage(sliderData[i]);
         sliderContent.appendChild(sliderImg);
     }
-    let dots = createDots();
-    sliderContent.appendChild(dots);
 }
 setSlide();
+
+setTimeout(function() {
+    sliderArrowRightClick(true);
+}, 4000);
+
+// Contact Us Section
+let registrationForm = document.getElementById('registrationForm');
+let errors = {};
+
+registrationForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let regExp = /[a-zA-Z]/g;
+    let registration_form = event.target;  
+
+    let firstName = document.getElementById('fName').value;
+
+    // create error message
+    registration_form.querySelectorAll('.error-text').forEach(element => {
+        element.textContent = '';
+        errors = {};
+    });
+
+    if(firstName == '') {
+        errors.fName = 'First Name can not be empty'
+    }
+    else if (firstName.length < 6 || !regExp.test(firstName)) {
+        errors.fName = 'Name must contain at least 6 characters and should contain letters'
+    }
+
+    let lastName = document.getElementById('lName').value;
+    if(lastName == '') {
+        errors.lName = 'Last Name can not be empty'
+    }
+    else if (lastName.length < 6 || !regExp.test(lastName)) {
+        errors.lName = 'Last Name must contain at least 6 characters and should contain letters'
+    }
+
+    let password = document.getElementById('password').value;
+    let repeatPassword = document.getElementById('repeat-password').value;
+
+    if (password != repeatPassword || password == "") {
+        errors.repeat_password = 'Password can not be empty and Passwords do not match';
+    }
+
+    let agree = document.getElementById('agree').checked;
+    if (!agree) {
+        errors.agree = 'You must agree our terms and conditions';
+    }
+
+    for (let item in errors) {
+        let errorSpan = document.getElementById('error_' + item); 
+        if(errorSpan) {
+            errorSpan.textContent = errors[item];
+        }
+    }
+    if (Object.keys(errors).length == 0) {
+        form.submit();
+    }
+});
+
+function emailValidate () {
+    let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let emailInput = document.getElementById('email');
+    let email = document.getElementById('email').value;
+    let emailSpan = document.getElementById('error_email');
+
+    if(email.match(emailRegExp)) {
+        emailSpan.innerHTML = 'Your Email is Valid';
+        emailSpan.style.color = 'green';
+        emailInput.style.outline = 'none';
+        emailInput.style.borderColor = 'green';
+    }
+    else {
+        emailSpan.innerHTML = 'Please, enter valid email address'
+        emailSpan.style.color = 'rgb(218, 61, 61)';
+        emailInput.style.outline = 'none';
+        emailInput.style.borderColor = 'rgb(218, 61, 61)';
+    }
+    
+}

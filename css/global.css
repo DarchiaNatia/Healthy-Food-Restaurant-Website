@@ -897,7 +897,7 @@ body .slider-section .slider-wrapper .slider-content .sliderDot {
 }
 
 body .slider-section .slider-wrapper .slider-content .sliderDot.active {
-  background-color: yellow;
+  background-color: darkred;
 }
 
 body .slider-section .slider-readMore-btn {
@@ -1065,10 +1065,9 @@ body .contactUs-section .form-wrapper {
 
 body .contactUs-section .form-wrapper .registration-form .registration-inputs {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border: solid 1px #b9b9b9;
   padding: 8px;
-  cursor: pointer;
 }
 
 body .contactUs-section .form-wrapper .registration-form .registration-inputs::-webkit-input-placeholder {
@@ -1126,6 +1125,19 @@ body .contactUs-section .form-wrapper .registration-form .input-labeles {
   text-align: left;
 }
 
+body .contactUs-section .form-wrapper .registration-form .fName-div, body .contactUs-section .form-wrapper .registration-form .lName-div, body .contactUs-section .form-wrapper .registration-form .email-div, body .contactUs-section .form-wrapper .registration-form .password-div, body .contactUs-section .form-wrapper .registration-form .repeat-password-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1139,19 +1151,17 @@ body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrappe
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
 }
 
 body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper .fName-div, body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper .lName-div {
   width: 48%;
-  height: 50px;
 }
 
 body .contactUs-section .form-wrapper .registration-form .email-div, body .contactUs-section .form-wrapper .registration-form .password-div, body .contactUs-section .form-wrapper .registration-form .repeat-password-div {
   width: 100%;
-  height: 50px;
   margin-top: 10px;
 }
 
@@ -1218,6 +1228,13 @@ body .contactUs-section .form-wrapper .registration-form .registration-submit-bu
 body .contactUs-section .form-wrapper .registration-form .registration-submit-button:hover {
   background-color: #000;
   color: #fff;
+}
+
+body .contactUs-section .form-wrapper .registration-form .error-text {
+  color: #da3d3d;
+  font-size: 16px;
+  font-style: italic;
+  display: block;
 }
 
 body footer {
