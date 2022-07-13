@@ -131,17 +131,17 @@ header {
             @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
             text-transform: uppercase;
         }
-        .home-section-heading-3 {
-            @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
-            margin: 30px auto;
-            width: 85%;
-        }
+        // .home-section-heading-3 {
+        //     @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
+        //     margin: 30px auto;
+        //     width: 85%;
+        // }
         .section-main-information {
             margin-top: 90px;
             @include display-flex(row, space-between, center);;
             .info-details-div {
-                width: 426px;
-                height: 426px;
+                // width: 426px;
+                // height: 426px;
                 .img-info-details {
                     width: 100%;
                     height: 100%;
@@ -176,6 +176,32 @@ header {
             }
         }
     }
+    @media (max-width: $container-size-medium) {
+        .home-section-heading-3 {
+            @include text-style($Playfair-Display-font, $heading-4-size, normal, 500, 50px, 0px, #000, center);
+            margin: 30px auto;
+            width: 80%;
+        }
+        .section-main-information {
+            .info-details-div {
+                width: 100%;
+                height: 426px;
+            }
+        }
+    }
+    @media (min-width: 912px) {
+        .home-section-heading-3 {
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
+            margin: 30px auto;
+            width: 85%;
+        }
+        .section-main-information {
+            .info-details-div {
+                width: 426px;
+                height: 426px;
+            }
+        }
+    }
 }
 // end of Home section and start Menu section
 .menu-section {
@@ -196,7 +222,7 @@ header {
         margin: 20px auto;
         .menu-div {
             width: 40%;
-            padding-bottom: 80px;
+            margin-bottom: 50px;
             .menu-section-h6 {
                 @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 2px, $menu-section-text-color, center);
                 margin-bottom: 20px;
@@ -257,6 +283,14 @@ header {
             }
         }
     }
+    @media (max-width: 600px) {
+        .menu-wrapper {
+            .menu-div {
+                width: 80%;
+                margin-bottom: 50px;
+            }
+        }
+    }
 }
 // Events Section
 .events-section {
@@ -275,7 +309,7 @@ header {
             @include display-flex(row, space-around, center);
             .events {
                 width: 320px;
-                height: 300px;
+                height: 310px;
                 margin-top: 40px;
                 .event-day {
                     @include text-style($Open-Sans, $heading-3-size, normal, bold, $heading-3-size, 3px, #000, center);
@@ -284,7 +318,7 @@ header {
                 .event-month {
                     @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
                     text-transform: uppercase;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                 }
                 .event-description {
                     @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
@@ -304,6 +338,22 @@ header {
                 margin: 30px;
             }
         }
+    }
+    @media (max-width: $container-size-medium) {
+        .section-wrapper {
+            .events-section-heading-3 {
+                @include text-style($Playfair-Display-font, $heading-4-size, normal, bold, $heading-4-size, 0px, #000, center);
+                margin-top: 30px;
+                padding: 5px;
+            }
+            .events-wrapper {
+                flex-direction: column;
+                .events {
+                    width: 90%;
+                    height: auto;
+                }
+            }
+        }   
     }   
 }
 // end of Events Section
@@ -346,7 +396,7 @@ header {
             }
         }
     }
-    .health-section-reviews {
+    .health-section-reviews-div {
         @include display-flex (row, space-between, start);
         width: 85%;
         margin: 120px auto 0px;
@@ -377,6 +427,33 @@ header {
             & > p {
                 @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
                 margin-top: 20px;
+            }
+        }
+    }
+    @media (max-width: $container-size-medium) {
+        .suggestion-div {
+            width: 100%;
+            flex-direction: column;
+            .suggestion-text {
+                width: 90%;
+                margin-bottom: 50px;
+            }
+            .suggestion-img {
+                width: 100%;
+            }
+        }
+        .health-section-reviews-div {
+            width: 100%;
+            flex-direction: column;
+            .section-reviews-img {
+                width: 100%;
+            }
+            .health-section-reviews-text {
+                padding: 10px;
+                width: 90%;
+                & > p {
+                    width: 80%;
+                }
             }
         }
     }
@@ -513,6 +590,26 @@ header {
             }
         } 
     }
+    @media (max-width: $container-size-medium) {
+        .cooking-section-wrapper {
+            .main-dish, .garnish, .desserts {
+                width: 50%;
+            }
+        } 
+    }
+    @media (max-width: 600px) {
+        .cooking-section-wrapper {
+            flex-direction: column;
+            .main-dish, .garnish, .desserts {
+                margin-bottom: 30px;
+                width: 70%;
+            }
+            .everyday-cook {
+                width: 220px;
+                height: 220px;
+            }
+        } 
+    }
 }
 // Contact Us Section
 .contactUs-section {
@@ -596,29 +693,53 @@ header {
             }
         }
     }
-}
-// Footer Section
-footer {
-    width: 100%;
-    height: 250px;
-    background-color: $footer-bg-color;
-    .social-network-div {
-        @include display-flex(row, center, center);
-        padding: 20px;
-        & > a {
-            margin: 20px;
-            color: #fff;
-            font-size: 24px;
-            &:hover {
-                color: $social-network-hover-color;
+    @media (max-width: $container-size-medium) {
+        .form-wrapper {
+            width: 90%;
+            .registration-inputs {
+                margin-bottom: 15px;
             }
         }
     }
-    .footer-content {
-        & > p {
-            @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, #fff, center);
-            width: 40%;
-            margin: 10px auto;
+}
+// Footer Section
+footer {
+    .footer-wrapper {
+        width: 100%;
+        height: 250px;
+        background-color: $footer-bg-color;
+        .social-network-div {
+            @include display-flex(row, center, center);
+            padding: 20px;
+            & > a {
+                margin: 20px;
+                color: #fff;
+                font-size: 24px;
+                &:hover {
+                    color: $social-network-hover-color;
+                }
+            }
+        }
+        .footer-content {
+            & > p {
+                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, #fff, center);
+                width: 40%;
+                margin: 0px auto;
+            }
+        }
+    }
+    @media (max-width: $container-size-medium){
+        .footer-wrapper {
+            height: 240px;
+            .social-network-div {
+                padding: 5px;
+            }
+            .footer-content {
+                & > p {
+                    width: 70%;
+                    padding: 10px;
+                }
+            }
         }
     }
 }

@@ -266,19 +266,6 @@ body .home-section .home-section-wrapper .home-section-heading {
   text-transform: uppercase;
 }
 
-body .home-section .home-section-wrapper .home-section-heading-3 {
-  font-family: "Playfair Display", serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 60px;
-  letter-spacing: 1px;
-  color: #000;
-  text-align: center;
-  margin: 30px auto;
-  width: 85%;
-}
-
 body .home-section .home-section-wrapper .section-main-information {
   margin-top: 90px;
   display: -webkit-box;
@@ -296,11 +283,6 @@ body .home-section .home-section-wrapper .section-main-information {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body .home-section .home-section-wrapper .section-main-information .info-details-div {
-  width: 426px;
-  height: 426px;
 }
 
 body .home-section .home-section-wrapper .section-main-information .info-details-div .img-info-details {
@@ -367,6 +349,44 @@ body .home-section .home-section-wrapper .section-main-information .info-details
   color: #a59797;
 }
 
+@media (max-width: 768px) {
+  body .home-section .home-section-heading-3 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: 0px;
+    color: #000;
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+  }
+  body .home-section .section-main-information .info-details-div {
+    width: 100%;
+    height: 426px;
+  }
+}
+
+@media (min-width: 912px) {
+  body .home-section .home-section-heading-3 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 1px;
+    color: #000;
+    text-align: center;
+    margin: 30px auto;
+    width: 85%;
+  }
+  body .home-section .section-main-information .info-details-div {
+    width: 426px;
+    height: 426px;
+  }
+}
+
 body .menu-section {
   background-color: #f2f2f2;
   padding-top: 80px;
@@ -418,7 +438,7 @@ body .menu-section .menu-wrapper {
 
 body .menu-section .menu-wrapper .menu-div {
   width: 40%;
-  padding-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 body .menu-section .menu-wrapper .menu-div .menu-section-h6 {
@@ -521,6 +541,13 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   fill: #a59797;
 }
 
+@media (max-width: 600px) {
+  body .menu-section .menu-wrapper .menu-div {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+}
+
 body .events-section .section-wrapper .events-section-heading {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -566,7 +593,7 @@ body .events-section .section-wrapper .events-wrapper {
 
 body .events-section .section-wrapper .events-wrapper .events {
   width: 320px;
-  height: 300px;
+  height: 310px;
   margin-top: 40px;
 }
 
@@ -592,7 +619,7 @@ body .events-section .section-wrapper .events-wrapper .events .event-month {
   color: #000;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 body .events-section .section-wrapper .events-wrapper .events .event-description {
@@ -634,6 +661,31 @@ body .events-section .section-wrapper .load-buttons .load-more-btn, body .events
   font-size: 24px;
   cursor: pointer;
   margin: 30px;
+}
+
+@media (max-width: 768px) {
+  body .events-section .section-wrapper .events-section-heading-3 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: #000;
+    text-align: center;
+    margin-top: 30px;
+    padding: 5px;
+  }
+  body .events-section .section-wrapper .events-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .events-section .section-wrapper .events-wrapper .events {
+    width: 90%;
+    height: auto;
+  }
 }
 
 body .health {
@@ -719,7 +771,7 @@ body .health .suggestion-div .suggestion-img > img {
      object-fit: cover;
 }
 
-body .health .health-section-reviews {
+body .health .health-section-reviews-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -739,22 +791,22 @@ body .health .health-section-reviews {
   margin: 120px auto 0px;
 }
 
-body .health .health-section-reviews .section-reviews-img {
+body .health .health-section-reviews-div .section-reviews-img {
   width: 50%;
 }
 
-body .health .health-section-reviews .section-reviews-img > img {
+body .health .health-section-reviews-div .section-reviews-img > img {
   width: 100%;
   height: 585px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body .health .health-section-reviews .health-section-reviews-text {
+body .health .health-section-reviews-div .health-section-reviews-text {
   width: 40%;
 }
 
-body .health .health-section-reviews .health-section-reviews-text > h6 {
+body .health .health-section-reviews-div .health-section-reviews-text > h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -766,7 +818,7 @@ body .health .health-section-reviews .health-section-reviews-text > h6 {
   margin-top: 60px;
 }
 
-body .health .health-section-reviews .health-section-reviews-text > h3 {
+body .health .health-section-reviews-div .health-section-reviews-text > h3 {
   font-family: "Playfair Display", serif;
   font-size: 48px;
   font-style: normal;
@@ -778,14 +830,14 @@ body .health .health-section-reviews .health-section-reviews-text > h3 {
   margin-top: 30px;
 }
 
-body .health .health-section-reviews .health-section-reviews-text > i {
+body .health .health-section-reviews-div .health-section-reviews-text > i {
   font-size: 48px;
   font-weight: bold;
   color: #000;
   margin-top: 30px;
 }
 
-body .health .health-section-reviews .health-section-reviews-text > p {
+body .health .health-section-reviews-div .health-section-reviews-text > p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -795,6 +847,40 @@ body .health .health-section-reviews .health-section-reviews-text > p {
   color: #414044;
   text-align: left;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  body .health .suggestion-div {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .health .suggestion-div .suggestion-text {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  body .health .suggestion-div .suggestion-img {
+    width: 100%;
+  }
+  body .health .health-section-reviews-div {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .health .health-section-reviews-div .section-reviews-img {
+    width: 100%;
+  }
+  body .health .health-section-reviews-div .health-section-reviews-text {
+    padding: 10px;
+    width: 90%;
+  }
+  body .health .health-section-reviews-div .health-section-reviews-text > p {
+    width: 80%;
+  }
 }
 
 body .slider-section .slider-section-heading {
@@ -1033,6 +1119,29 @@ body .everyday-cook-section .cooking-section-wrapper .everyday-cook > h6 {
   margin: 100px auto;
 }
 
+@media (max-width: 768px) {
+  body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-cook-section .cooking-section-wrapper .garnish, body .everyday-cook-section .cooking-section-wrapper .desserts {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  body .everyday-cook-section .cooking-section-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-cook-section .cooking-section-wrapper .garnish, body .everyday-cook-section .cooking-section-wrapper .desserts {
+    margin-bottom: 30px;
+    width: 70%;
+  }
+  body .everyday-cook-section .cooking-section-wrapper .everyday-cook {
+    width: 220px;
+    height: 220px;
+  }
+}
+
 body .contactUs-section .contactUs-section-heading {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -1237,13 +1346,22 @@ body .contactUs-section .form-wrapper .registration-form .error-text {
   display: block;
 }
 
-body footer {
+@media (max-width: 768px) {
+  body .contactUs-section .form-wrapper {
+    width: 90%;
+  }
+  body .contactUs-section .form-wrapper .registration-inputs {
+    margin-bottom: 15px;
+  }
+}
+
+body footer .footer-wrapper {
   width: 100%;
   height: 250px;
   background-color: #333333;
 }
 
-body footer .social-network-div {
+body footer .footer-wrapper .social-network-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1262,17 +1380,17 @@ body footer .social-network-div {
   padding: 20px;
 }
 
-body footer .social-network-div > a {
+body footer .footer-wrapper .social-network-div > a {
   margin: 20px;
   color: #fff;
   font-size: 24px;
 }
 
-body footer .social-network-div > a:hover {
+body footer .footer-wrapper .social-network-div > a:hover {
   color: #5593cd;
 }
 
-body footer .footer-content > p {
+body footer .footer-wrapper .footer-content > p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -1282,6 +1400,19 @@ body footer .footer-content > p {
   color: #fff;
   text-align: center;
   width: 40%;
-  margin: 10px auto;
+  margin: 0px auto;
+}
+
+@media (max-width: 768px) {
+  body footer .footer-wrapper {
+    height: 240px;
+  }
+  body footer .footer-wrapper .social-network-div {
+    padding: 5px;
+  }
+  body footer .footer-wrapper .footer-content > p {
+    width: 70%;
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=global.css.map */
