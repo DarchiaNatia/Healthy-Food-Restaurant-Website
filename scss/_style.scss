@@ -256,29 +256,63 @@ header {
                     width: 180px;
                     height: 200px;
                 }
-                .box-elements {
-                    position: relative;
-                    padding-top: 40px;
-                    height: 100%;
-                    .box-head {
-                        .menu-box-svg {
-                            width: 50px;
-                            height: 50px;
-                            fill: #fff;
-                            display: block;
-                            margin: 0px auto 20px;
-                        }
-                    }
-                    .box-body {
-                        & > h6 {
-                            @include text-style($Open-Sans, $heading-6-size, normal, bold, $heading-6-size, 1px, #fff, center);
-                        }
-                    }
-                &:hover {
-                    .menu-box-svg {
-                        fill: $hover-color;
+                @media (max-width: 600px) {
+                    .transparent-box {
+                        width: 150px;
+                        height: 170px;
                     }
                 }
+                .box-elements {
+                    position: relative;
+                    @include display-flex(column, center, center);
+                    height: 100%;
+                    .menu-box-svg {
+                        width: 50px;
+                        height: 50px;
+                        fill: #fff;
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+                    & > h6 {
+                        @include text-style($Open-Sans, $heading-6-size, normal, bold, $heading-6-size, 1px, #fff, center);
+                    }
+                    &:hover {
+                        .menu-box-svg {
+                            fill: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+        @media (min-width:600px) and (max-width:$container-size-medium){
+            .menu-section-bg-wrapper {
+                width: 60%;
+                height: auto;
+                top: 30px;
+                justify-content: space-around;
+            }
+        }
+        // @media (max-width: $container-size-medium) {
+        //     .menu-section-bg-wrapper {
+        //         width: 60%;
+        //         height: auto;
+        //         top: 30px;
+        //         justify-content: space-around;
+        //     }
+        // }
+        @media (max-width: 600px) {
+            .menu-section-bg-wrapper {
+                width: 90%;
+                top: 20;
+                right: 0;
+                height: auto;
+                .menu-section-cover-box {
+                    width: 150px;
+                    height: 170px;
+                }
+               
+                .menu-section-cover-box {
+                    margin-bottom: 20px;
                 }
             }
         }

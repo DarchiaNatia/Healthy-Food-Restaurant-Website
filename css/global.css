@@ -512,21 +512,42 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   height: 200px;
 }
 
+@media (max-width: 600px) {
+  body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .transparent-box {
+    width: 150px;
+    height: 170px;
+  }
+}
+
 body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements {
   position: relative;
-  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements .box-head .menu-box-svg {
+body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements .menu-box-svg {
   width: 50px;
   height: 50px;
   fill: #fff;
   display: block;
-  margin: 0px auto 20px;
+  margin-bottom: 20px;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements .box-body > h6 {
+body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements > h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -539,6 +560,32 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
 
 body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements:hover .menu-box-svg {
   fill: #a59797;
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  body .menu-section .menu-section-bg .menu-section-bg-wrapper {
+    width: 60%;
+    height: auto;
+    top: 30px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  body .menu-section .menu-section-bg .menu-section-bg-wrapper {
+    width: 90%;
+    top: 20;
+    right: 0;
+    height: auto;
+  }
+  body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box {
+    width: 150px;
+    height: 170px;
+  }
+  body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 600px) {
