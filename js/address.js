@@ -1,3 +1,4 @@
+let filterAddresses = document.getElementById('filter');
 let apiUrls = {
     address: 'https://api.openbrewerydb.org/breweries'
 };
@@ -27,7 +28,7 @@ function getAddress() {
             location.appendChild(location_text);
 
             let name = document.createElement('h6');
-            name.classList.add('addresses-text');
+            name.classList.add('name-text');
             let name_icon = document.createElement('i');
             name_icon.classList.add('fa-solid', 'fa-hotel', 'address-icon');
             let name_text = document.createElement('span');
@@ -36,7 +37,7 @@ function getAddress() {
             name.appendChild(name_text);
 
             let phone = document.createElement('h6');
-            phone.classList.add('addresses-text');
+            phone.classList.add('phone-text');
             let phone_icon = document.createElement('i');
             phone_icon.classList.add('fa-solid', 'fa-phone', 'address-icon');
             let phone_text = document.createElement('span');
@@ -53,3 +54,17 @@ function getAddress() {
     .catch(err => console.error(err));
 }
 getAddress();
+
+function filterAddress(searchAddress) {
+    document.querySelectorAll('#address-section-wrapper .address').forEach(item => {
+        let searchableAddress = item.querySelector('.addresses-text span').textContent.replace('Location: ', '');
+        if (searchableAddress.toLowerCase().includes(searchAddress.toLowerCase())) {
+            item.classList.remove('hide');
+        } else {
+            item.classList.add('hide');
+        }
+    });
+}
+filterAddresses.addEventListener('input', function(event){
+    filterAddress(event.target.value);
+});

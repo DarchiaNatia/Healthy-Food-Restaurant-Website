@@ -769,6 +769,24 @@ header {
 }
 // Addresses Section Start
 .our-addresses-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .search-block{
+        margin-bottom: 20px;
+        & > h6 {
+            display: inline;
+            height: 60px;
+            @include text-style($Open-Sans, $addresses-text-size, normal, 400, 18px, 0px, $addresses-text-color, left);
+        }
+        #filter {
+            width: 200px;
+            height: 40px;
+            border: solid 1px $form-border-color;
+            padding: 8px;
+        }
+    }
     .address-section-wrapper {
         @include set-background-image (url("../images/map.png"), 800px, center, no-repeat, cover, null);
         @include display-flex(row, space-around, center);
@@ -793,9 +811,12 @@ header {
                     color: darkred;
                 }
             }
-            .addresses-text {
+            .addresses-text, .name-text, .phone-text {
                 @include text-style($Open-Sans, $addresses-text-size, normal, 400, 18px, 0px, $addresses-text-color, left);
             }
+        }
+        .address.hide {
+            display: none;
         }
     }
 }
