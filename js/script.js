@@ -98,6 +98,7 @@ let eventsData = [
 let sliderLeftArrow = document.getElementById("leftArrow");
 let sliderRightArrow = document.getElementById("rightArrow");
 let sliderContent = document.getElementById("sliderContent");
+let slider = document.getElementById('slider');
 let sliderIndex = 0;
 let sliderDot = document.querySelectorAll('.sliderDot');
 let slidetCount = 3;
@@ -127,10 +128,6 @@ let sliderData = [
         imgUrl: "images/pancake.jpg"
     }
 ];
-
-let dots = createDots();
-sliderContent.appendChild(dots);
-
 // Header Section methods
 burgerBtn.addEventListener('click', function(){
     openNavigation();
@@ -307,6 +304,9 @@ function setSlide() {
     }
 }
 setSlide();
+
+let dots = createDots();
+slider.appendChild(dots);
 
 setTimeout(function() {
     sliderArrowRightClick(true);

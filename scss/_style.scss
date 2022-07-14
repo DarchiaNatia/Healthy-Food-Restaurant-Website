@@ -292,14 +292,6 @@ header {
                 justify-content: space-around;
             }
         }
-        // @media (max-width: $container-size-medium) {
-        //     .menu-section-bg-wrapper {
-        //         width: 60%;
-        //         height: auto;
-        //         top: 30px;
-        //         justify-content: space-around;
-        //     }
-        // }
         @media (max-width: 600px) {
             .menu-section-bg-wrapper {
                 width: 90%;
@@ -504,7 +496,6 @@ header {
     }
     .slider-wrapper {
         position: relative;
-        height: 400px;
         .arrow-btn {
             position: absolute;
             font-size: 50px;
@@ -520,37 +511,39 @@ header {
         .arrow-right {
             right: 50px;
         }
-        .slider-content {
+        .slider {
+            @include display-flex(column, space-between, center);
             width: 75%;
-            margin: 70px auto;
-            @include display-flex (row, space-around, center);
-            .slider-image {
-                width: 310px;
-                height: 360px;
-                background-repeat: no-repeat;
-                background-size: cover;
-                @include transition-ease-in-out;
-                &:hover {
-                    filter: brightness(70%);
+            margin: 50px auto;
+            .slider-content {
+                @include display-flex (row, space-between, center);
+                width: 100%;
+                margin-bottom: 20px;
+                .slider-image {
+                    width: 310px;
+                    height: 360px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    @include transition-ease-in-out;
+                    &:hover {
+                        filter: brightness(70%);
+                    }
                 }
             }
             .dots-wrapper {
-                display: flex;
-                position: absolute;
-                left: 50%;
-                bottom: 5px;
-            }
-            .sliderDot {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $dots-color;
-                margin: 5px;
-                cursor: pointer;
-            }
-            .sliderDot.active {
-                background-color: darkred;
-            }
+                @include display-flex(row, center, center);
+                .sliderDot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $dots-color;
+                    margin: 5px;
+                    cursor: pointer;
+                }
+                .sliderDot.active {
+                    background-color: darkred;
+                }
+            } 
         }
     }
     .slider-readMore-btn {
