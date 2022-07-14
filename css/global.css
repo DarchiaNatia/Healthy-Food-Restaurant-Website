@@ -942,6 +942,19 @@ body .slider-section .slider-section-heading {
   margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+  body .slider-section .slider-section-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #000;
+    text-align: center;
+  }
+}
+
 body .slider-section .slider-section-text {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -1060,6 +1073,47 @@ body .slider-section .slider-wrapper .slider .dots-wrapper .sliderDot {
 
 body .slider-section .slider-wrapper .slider .dots-wrapper .sliderDot.active {
   background-color: darkred;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  body .slider-section .slider-wrapper .slider .slider-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .slider-section .slider-wrapper .slider .slider-content .slider-image {
+    width: 310px;
+    height: 360px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body .slider-section .slider .slider-content .slider-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  body .slider-section .slider-wrapper .arrow-btn {
+    font-size: 30px;
+  }
+  body .slider-section .slider-wrapper .arrow-left {
+    left: 10px;
+  }
+  body .slider-section .slider-wrapper .arrow-right {
+    right: 10px;
+  }
 }
 
 body .slider-section .slider-readMore-btn {
