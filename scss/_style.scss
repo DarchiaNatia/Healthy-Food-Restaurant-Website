@@ -702,6 +702,38 @@ header {
         }
     }
 }
+// Addresses Section Start
+.our-addresses-section {
+    .address-section-wrapper {
+        @include set-background-image (url("../images/map.png"), 800px, center, no-repeat, cover, null);
+        @include display-flex(row, space-around, center);
+        width: 90%;
+        margin: 0px auto;
+        padding: 20px;
+        height: auto;
+        .address {
+            @include display-flex(column, space-around, left);
+            width: 200px;
+            height: 150px;
+            background-color:  #fff;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 20px 20px 50px grey;
+            .address-icon {
+                color: $addresses-icon-color;
+                font-size: 16px;
+                margin-right: 5px;
+                &:hover {
+                    color: darkred;
+                }
+            }
+            .addresses-text {
+                @include text-style($Open-Sans, $addresses-text-size, normal, 400, 18px, 0px, $addresses-text-color, left);
+            }
+        }
+    }
+}
 // Footer Section
 footer {
     .footer-wrapper {
