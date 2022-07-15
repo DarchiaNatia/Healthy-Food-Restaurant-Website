@@ -388,7 +388,7 @@ body .home-section .home-section-wrapper .section-main-information .info-details
 }
 
 body .menu-section {
-  background-color: pink;
+  background-color: #f2f2f2;
   padding-top: 80px;
 }
 
@@ -464,7 +464,7 @@ body .menu-section .menu-wrapper .menu-div .dish-ingredients {
   text-align: center;
 }
 
-body .menu-section .menu-section-bg {
+body .menu-section .menu-section-cover {
   position: relative;
   background-image: url("../images/menu-section-bg.jpg");
   min-height: 740px;
@@ -473,7 +473,7 @@ body .menu-section .menu-section-bg {
   background-size: cover;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper {
   position: absolute;
   width: 45%;
   height: auto;
@@ -496,7 +496,7 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper {
           align-items: center;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes {
   position: relative;
   width: 180px;
   height: 200px;
@@ -504,7 +504,7 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   cursor: pointer;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .transparent-box {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .transparent-box {
   position: absolute;
   background-color: #000;
   opacity: 0.5;
@@ -512,7 +512,7 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   height: 200px;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .box-elements {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,7 +532,7 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   height: 100%;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements .menu-box-svg {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .box-elements .menu-box-svg {
   width: 50px;
   height: 50px;
   fill: #fff;
@@ -540,7 +540,7 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   margin-bottom: 20px;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements > h6 {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .box-elements > h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -551,33 +551,56 @@ body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover
   text-align: center;
 }
 
-body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box .box-elements:hover .menu-box-svg {
+body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .box-elements:hover .menu-box-svg {
   fill: #a59797;
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
-  body .menu-section .menu-section-bg .menu-section-bg-wrapper {
-    width: 60%;
+@media (max-width: 320px) {
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper {
+    width: 100%;
+    top: 60px;
+    right: 0px;
     height: auto;
-    top: 30px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes {
+    width: 120px;
+    height: 120px;
+  }
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .transparent-box {
+    width: 120px;
+    height: 120px;
+  }
 }
 
-@media (max-width: 600px) {
-  body .menu-section .menu-section-bg .menu-section-bg-wrapper {
+@media (min-width: 321px) and (max-width: 767px) {
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper {
     width: 90%;
-    top: 20;
-    right: 0;
+    top: 40px;
+    right: 0px;
     height: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box {
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes {
     width: 150px;
     height: 170px;
   }
-  body .menu-section .menu-section-bg .menu-section-bg-wrapper .menu-section-cover-box {
-    margin-bottom: 20px;
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes .transparent-box {
+    width: 150px;
+    height: 170px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1124px) {
+  body .menu-section .menu-section-cover .menu-section-cover-wrapper {
+    width: 50%;
+    top: 20px;
+    right: 20px;
+    height: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 

@@ -188,8 +188,7 @@ body {
     }
     // end of Home section and start Menu section
     .menu-section {
-        background-color: pink;
-        // background-color: $menu-section-bg;
+        background-color: $menu-section-bg;
         padding-top: 80px;
         .menu-section-heading {
             @include text-style($Open-Sans, $heading-6-size, normal, 500, 20px, 3px, #000, center);
@@ -217,17 +216,17 @@ body {
                 }
             }
         }
-        .menu-section-bg {
+        .menu-section-cover {
             position: relative;
             @include set-background-image (url("../images/menu-section-bg.jpg"), 740px, center, no-repeat, cover, null);
-            .menu-section-bg-wrapper {
+            .menu-section-cover-wrapper {
                 position: absolute;
                 width: 45%;
                 height: auto;
                 top: 120px;
                 right: 70px;
                 @include display-flex;
-                .menu-section-cover-box {
+                .menu-section-cover-boxes {
                     position: relative;
                     width: 180px;
                     height: 200px;
@@ -240,12 +239,6 @@ body {
                         width: 180px;
                         height: 200px;
                     }
-                    // @media (max-width: $container-size-small) {
-                    //     .transparent-box {
-                    //         width: 150px;
-                    //         height: 170px;
-                    //     }
-                    // }
                     .box-elements {
                         position: relative;
                         @include display-flex(column, center, center);
@@ -268,29 +261,48 @@ body {
                     }
                 }
             }
-            @media (min-width:$container-size-small) and (max-width:$container-size-medium){
-                .menu-section-bg-wrapper {
-                    width: 60%;
+            @media (max-width: 320px) {
+                .menu-section-cover-wrapper {
+                    width: 100%;
+                    top: 60px;
+                    right: 0px;
                     height: auto;
-                    top: 30px;
                     justify-content: space-around;
+                    .menu-section-cover-boxes {
+                        width: 120px;
+                        height: 120px;
+                        .transparent-box {
+                            width: 120px;
+                            height: 120px;
+                        }
+                    }
                 }
             }
-            @media (max-width: $container-size-small) {
-                .menu-section-bg-wrapper {
+            @media (min-width: 321px) and (max-width: 767px) {
+                .menu-section-cover-wrapper {
                     width: 90%;
-                    top: 20;
-                    right: 0;
+                    top: 40px;
+                    right: 0px;
                     height: auto;
-                    .menu-section-cover-box {
+                    justify-content: space-around;
+                    .menu-section-cover-boxes {
                         width: 150px;
                         height: 170px;
+                        .transparent-box {
+                            width: 150px;
+                            height: 170px;
+                        }
                     }
-                
-                    .menu-section-cover-box {
-                        margin-bottom: 20px;
-                    }
-                }
+                }  
+            }
+            @media (min-width: $container-size-medium) and (max-width: 1124px) {
+                .menu-section-cover-wrapper {
+                    width: 50%;
+                    top: 20px;
+                    right: 20px;
+                    height: auto;
+                    justify-content: space-around;
+                }  
             }
         }
         @media (max-width: $container-size-small) {
