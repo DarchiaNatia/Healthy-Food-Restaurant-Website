@@ -10,6 +10,8 @@ body {
                 left: 0px;
                 opacity: 0;
                 display: none;
+                -webkit-transition: 0.5s;
+                -o-transition: 0.5s;
                 transition: 0.5s;
                 background-color: #000;
                 z-index: 2;
@@ -23,6 +25,8 @@ body {
                 left: 0;
                 background-color: $sideNavigation-BG;
                 overflow-x: hidden;
+                -webkit-transition: 0.5s;
+                -o-transition: 0.5s;
                 transition: 0.5s;
                 padding-top: 60px;
                 .pages {
@@ -31,6 +35,8 @@ body {
                         padding: 8px 8px 8px 32px;
                         @include text-style($Playfair-Display-font, $navigation-link-size, normal, 300, $navigation-link-size, 1px, $navigation-color, left);
                         display: block;
+                        -webkit-transition: 0.3s;
+                        -o-transition: 0.3s;
                         transition: 0.3s;
                         &:hover {
                             color: $navigation-hover;
@@ -45,6 +51,8 @@ body {
                     margin-left: 50px;
                     color: $navigation-color;
                     cursor: pointer;
+                    -webkit-transition: 0.5s;
+                    -o-transition: 0.5s;
                     transition: 0.5s;
                     &:hover {
                         color: $navigation-hover;
@@ -134,7 +142,8 @@ body {
                     .img-info-details {
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                     }
                     .info-details-heading-6 {
                         @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 3px, #000, center);
@@ -262,7 +271,8 @@ body {
                     top: 60px;
                     right: 0px;
                     height: auto;
-                    justify-content: space-around;
+                    -ms-flex-pack: distribute;
+                        justify-content: space-around;
                     .menu-section-cover-boxes {
                         width: 120px;
                         height: 120px;
@@ -279,7 +289,8 @@ body {
                     top: 40px;
                     right: 0px;
                     height: auto;
-                    justify-content: space-around;
+                    -ms-flex-pack: distribute;
+                        justify-content: space-around;
                     .menu-section-cover-boxes {
                         width: 150px;
                         height: 170px;
@@ -296,7 +307,8 @@ body {
                     top: 20px;
                     right: 20px;
                     height: auto;
-                    justify-content: space-around;
+                    -ms-flex-pack: distribute;
+                        justify-content: space-around;
                 }  
             }
         }
@@ -321,7 +333,8 @@ body {
                 @include set-background-image (url("../images/banner-img.png"), 100%, center, no-repeat, cover, null);
                 background-position: bottom;
                 border: 2px solid grey;
-                box-shadow: 20px 20px 100px grey;
+                -webkit-box-shadow: 20px 20px 100px grey;
+                        box-shadow: 20px 20px 100px grey;
             }
             .banner-close{
                 position: absolute;
@@ -406,7 +419,10 @@ body {
                     padding: 5px;
                 }
                 .events-wrapper {
-                    flex-direction: column;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
                     .events {
                         width: 90%;
                         height: auto;
@@ -451,7 +467,8 @@ body {
                 & > img {
                     width: 100%;
                     height: 540px;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                 }
             }
         }
@@ -464,7 +481,8 @@ body {
                 & > img {
                     width: 100%;
                     height: 585px;
-                    object-fit: cover;
+                    -o-object-fit: cover;
+                       object-fit: cover;
                 }
             }
             .health-section-reviews-text {
@@ -492,7 +510,10 @@ body {
         @media (max-width: $container-size-medium) {
             .suggestion-div {
                 width: 100%;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 .suggestion-text {
                     width: 90%;
                     margin-bottom: 50px;
@@ -503,7 +524,10 @@ body {
             }
             .health-section-reviews-div {
                 width: 100%;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 .section-reviews-img {
                     width: 100%;
                 }
@@ -564,7 +588,8 @@ body {
                         background-size: cover;
                         @include transition-ease-in-out;
                         &:hover {
-                            filter: brightness(70%);
+                            -webkit-filter: brightness(70%);
+                                    filter: brightness(70%);
                         }
                     }
                 }
@@ -635,6 +660,7 @@ body {
             width: 85%;
             margin: 70px auto;
             padding: $image-grid-gap;
+            display: -ms-grid;
             display: grid;
             grid-template-columns: repeat($image-grid-num-cols, 1fr);
             grid-auto-rows: $image-grid-row-height;
@@ -643,13 +669,16 @@ body {
             & > img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
         }
         .image-grid-column-2 {
+            -ms-grid-column-span: 2;
             grid-column: span 2;
         }
         .image-grid-row-2 {
+            -ms-grid-row-span: 2;
             grid-row: span 2;
         }
     }
@@ -697,7 +726,10 @@ body {
         }
         @media (max-width: $container-size-small) {
             .cooking-section-wrapper {
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 .main-dish, .garnish, .desserts {
                     margin-bottom: 30px;
                     width: 70%;
@@ -729,6 +761,18 @@ body {
                     height: 50px;
                     border: 1px solid $form-border-color;
                     padding: 8px;
+                    &::-webkit-input-placeholder {
+                        @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                    }
+                    &::-moz-placeholder {
+                        @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                    }
+                    &:-ms-input-placeholder {
+                        @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                    }
+                    &::-ms-input-placeholder {
+                        @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                    }
                     &::placeholder {
                         @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
                     }
@@ -737,9 +781,16 @@ body {
                     @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $input-labels-text-color, left);
                 }
                 .fName-div, .lName-div, .email-div, .password-div, .repeat-password-div {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                            justify-content: space-between;
                 }
                 .fullName-inputs-wrapper {
                     @include display-flex(row, space-between, top);
@@ -802,10 +853,18 @@ body {
     }
     // Addresses Section Start
     .our-addresses-section {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         .search-block{
             margin-bottom: 20px;
             & > h6 {
@@ -835,7 +894,8 @@ body {
                 margin-bottom: 20px;
                 padding: 10px;
                 border-radius: 10px;
-                box-shadow: 20px 20px 50px grey;
+                -webkit-box-shadow: 20px 20px 50px grey;
+                        box-shadow: 20px 20px 50px grey;
                 .address-icon {
                     color: $addresses-icon-color;
                     font-size: 16px;
@@ -902,9 +962,12 @@ body {
         position: fixed;
         bottom: 0px;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         border-radius: 20px;
-        box-shadow: 40px 40px 120px $cookies-bg-color;
+        -webkit-box-shadow: 40px 40px 120px $cookies-bg-color;
+                box-shadow: 40px 40px 120px $cookies-bg-color;
        
         & > h5 {
             @include text-style($Open-Sans, $heading-5-size, normal, bold, $heading-5-size, 0px, #fff, center);

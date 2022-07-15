@@ -307,7 +307,7 @@ body .home-section .home-section-wrapper .section-main-information .info-details
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-heading-6 {
@@ -562,7 +562,7 @@ body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section
     right: 0px;
     height: auto;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes {
     width: 120px;
@@ -581,7 +581,7 @@ body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section
     right: 0px;
     height: auto;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section-cover-boxes {
     width: 150px;
@@ -600,7 +600,7 @@ body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section
     right: 20px;
     height: auto;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
@@ -631,7 +631,7 @@ body .banner-section .banner-section-wrapper .banner-cover {
   background-position: bottom;
   border: 2px solid grey;
   -webkit-box-shadow: 20px 20px 100px grey;
-          box-shadow: 20px 20px 100px grey;
+  box-shadow: 20px 20px 100px grey;
 }
 
 body .banner-section .banner-section-wrapper .banner-close {
@@ -793,8 +793,8 @@ body .events-section .section-wrapper .load-buttons .load-more-btn, body .events
   body .events-section .section-wrapper .events-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .events-section .section-wrapper .events-wrapper .events {
     width: 90%;
@@ -882,7 +882,7 @@ body .health .suggestion-div .suggestion-img > img {
   width: 100%;
   height: 540px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 body .health .health-section-reviews-div {
@@ -913,7 +913,7 @@ body .health .health-section-reviews-div .section-reviews-img > img {
   width: 100%;
   height: 585px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 body .health .health-section-reviews-div .health-section-reviews-text {
@@ -968,8 +968,8 @@ body .health .health-section-reviews-div .health-section-reviews-text > p {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .health .suggestion-div .suggestion-text {
     width: 90%;
@@ -982,8 +982,8 @@ body .health .health-section-reviews-div .health-section-reviews-text > p {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .health .health-section-reviews-div .section-reviews-img {
     width: 100%;
@@ -1108,7 +1108,7 @@ body .slider-section .slider-wrapper .slider .slider-content .slider-image {
 
 body .slider-section .slider-wrapper .slider .slider-content .slider-image:hover {
   -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  filter: brightness(70%);
 }
 
 body .slider-section .slider-wrapper .slider .dots-wrapper {
@@ -1217,14 +1217,16 @@ body .image-grid-section .image-grid > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 body .image-grid-section .image-grid-column-2 {
+  -ms-grid-column-span: 2;
   grid-column: span 2;
 }
 
 body .image-grid-section .image-grid-row-2 {
+  -ms-grid-row-span: 2;
   grid-row: span 2;
 }
 
@@ -1326,8 +1328,8 @@ body .everyday-cook-statistic-section .statistics-section-wrapper .everyday-cook
   body .everyday-cook-statistic-section .cooking-section-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body .everyday-cook-statistic-section .cooking-section-wrapper .main-dish, body .everyday-cook-statistic-section .cooking-section-wrapper .garnish, body .everyday-cook-statistic-section .cooking-section-wrapper .desserts {
     margin-bottom: 30px;
@@ -1437,11 +1439,11 @@ body .contactUs-section .form-wrapper .registration-form .fName-div, body .conta
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 body .contactUs-section .form-wrapper .registration-form .fullName-inputs-wrapper {
@@ -1558,13 +1560,13 @@ body .our-addresses-section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body .our-addresses-section .search-block {
@@ -1639,7 +1641,7 @@ body .our-addresses-section .address-section-wrapper .address {
   padding: 10px;
   border-radius: 10px;
   -webkit-box-shadow: 20px 20px 50px grey;
-          box-shadow: 20px 20px 50px grey;
+  box-shadow: 20px 20px 50px grey;
 }
 
 body .our-addresses-section .address-section-wrapper .address .address-icon {
@@ -1750,10 +1752,10 @@ body .cookies-div {
   bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   border-radius: 20px;
   -webkit-box-shadow: 40px 40px 120px #a19f9f;
-          box-shadow: 40px 40px 120px #a19f9f;
+  box-shadow: 40px 40px 120px #a19f9f;
 }
 
 body .cookies-div > h5 {
