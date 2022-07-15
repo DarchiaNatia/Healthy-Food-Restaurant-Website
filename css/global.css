@@ -640,10 +640,15 @@ body .banner-section .banner-section-wrapper .banner-close {
   right: 70px;
   font-size: 30px;
   color: #fff;
+  cursor: pointer;
 }
 
 body .banner-section .banner-section-wrapper .banner-close:hover {
   color: #a59797;
+}
+
+body .banner-section .banner-section-wrapper.hide {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -1223,7 +1228,7 @@ body .image-grid-section .image-grid-row-2 {
   grid-row: span 2;
 }
 
-body .everyday-cook-section .cooking-section-wrapper {
+body .everyday-cook-statistic-section .statistics-section-wrapper {
   width: 80%;
   margin: 150px auto;
   display: -webkit-box;
@@ -1242,7 +1247,7 @@ body .everyday-cook-section .cooking-section-wrapper {
           align-items: center;
 }
 
-body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-cook-section .cooking-section-wrapper .garnish, body .everyday-cook-section .cooking-section-wrapper .desserts {
+body .everyday-cook-statistic-section .statistics-section-wrapper .main-dish, body .everyday-cook-statistic-section .statistics-section-wrapper .garnish, body .everyday-cook-statistic-section .statistics-section-wrapper .desserts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1260,13 +1265,13 @@ body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-
           align-items: center;
 }
 
-body .everyday-cook-section .cooking-section-wrapper .main-dish .cooking-section-svg, body .everyday-cook-section .cooking-section-wrapper .garnish .cooking-section-svg, body .everyday-cook-section .cooking-section-wrapper .desserts .cooking-section-svg {
+body .everyday-cook-statistic-section .statistics-section-wrapper .main-dish .cooking-section-svg, body .everyday-cook-statistic-section .statistics-section-wrapper .garnish .cooking-section-svg, body .everyday-cook-statistic-section .statistics-section-wrapper .desserts .cooking-section-svg {
   width: 60px;
   height: 60px;
   margin-bottom: 30px;
 }
 
-body .everyday-cook-section .cooking-section-wrapper .main-dish > h3, body .everyday-cook-section .cooking-section-wrapper .garnish > h3, body .everyday-cook-section .cooking-section-wrapper .desserts > h3 {
+body .everyday-cook-statistic-section .statistics-section-wrapper .main-dish .value, body .everyday-cook-statistic-section .statistics-section-wrapper .garnish .value, body .everyday-cook-statistic-section .statistics-section-wrapper .desserts .value {
   font-family: "Playfair Display", serif;
   font-size: 48px;
   font-style: normal;
@@ -1278,7 +1283,7 @@ body .everyday-cook-section .cooking-section-wrapper .main-dish > h3, body .ever
   margin-bottom: 30px;
 }
 
-body .everyday-cook-section .cooking-section-wrapper .main-dish > h6, body .everyday-cook-section .cooking-section-wrapper .garnish > h6, body .everyday-cook-section .cooking-section-wrapper .desserts > h6 {
+body .everyday-cook-statistic-section .statistics-section-wrapper .main-dish > h6, body .everyday-cook-statistic-section .statistics-section-wrapper .garnish > h6, body .everyday-cook-statistic-section .statistics-section-wrapper .desserts > h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -1290,14 +1295,14 @@ body .everyday-cook-section .cooking-section-wrapper .main-dish > h6, body .ever
   text-transform: uppercase;
 }
 
-body .everyday-cook-section .cooking-section-wrapper .everyday-cook {
+body .everyday-cook-statistic-section .statistics-section-wrapper .everyday-cook {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   background-color: #000;
 }
 
-body .everyday-cook-section .cooking-section-wrapper .everyday-cook > h6 {
+body .everyday-cook-statistic-section .statistics-section-wrapper .everyday-cook > h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -1312,23 +1317,23 @@ body .everyday-cook-section .cooking-section-wrapper .everyday-cook > h6 {
 }
 
 @media (max-width: 768px) {
-  body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-cook-section .cooking-section-wrapper .garnish, body .everyday-cook-section .cooking-section-wrapper .desserts {
+  body .everyday-cook-statistic-section .cooking-section-wrapper .main-dish, body .everyday-cook-statistic-section .cooking-section-wrapper .garnish, body .everyday-cook-statistic-section .cooking-section-wrapper .desserts {
     width: 50%;
   }
 }
 
 @media (max-width: 600px) {
-  body .everyday-cook-section .cooking-section-wrapper {
+  body .everyday-cook-statistic-section .cooking-section-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .everyday-cook-section .cooking-section-wrapper .main-dish, body .everyday-cook-section .cooking-section-wrapper .garnish, body .everyday-cook-section .cooking-section-wrapper .desserts {
+  body .everyday-cook-statistic-section .cooking-section-wrapper .main-dish, body .everyday-cook-statistic-section .cooking-section-wrapper .garnish, body .everyday-cook-statistic-section .cooking-section-wrapper .desserts {
     margin-bottom: 30px;
     width: 70%;
   }
-  body .everyday-cook-section .cooking-section-wrapper .everyday-cook {
+  body .everyday-cook-statistic-section .cooking-section-wrapper .everyday-cook {
     width: 220px;
     height: 220px;
   }

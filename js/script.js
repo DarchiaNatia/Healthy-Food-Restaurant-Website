@@ -312,6 +312,42 @@ setTimeout(function() {
     sliderArrowRightClick(true);
 }, 4000);
 
+// Everyday Cook statistic section
+const counters = document.querySelectorAll('.value');
+const speed = 500;
+var statisticObject = document.querySelector('.main-dish');
+document.addEventListener(
+    'scroll',
+    (event) => {
+        if (window.pageYOffset >= statisticObject.offsetTop-(window.innerHeight-statisticObject.offsetHeight)) {
+            animateStatisticNumbers();
+        } else {
+            counters.forEach( counter => {
+                counter.innerText = '0';
+            });
+        }
+    }, 
+    { passive: true }
+);
+
+function animateStatisticNumbers() {
+    counters.forEach( counter => {
+        const animateNumbers = () => {
+           const value = +counter.getAttribute('total');
+           const data = +counter.innerText;
+          
+           const time = value / speed;
+          if(data < value) {
+               counter.innerText = Math.ceil(data + time);
+               setTimeout(animateNumbers, 1);
+             }else{
+               counter.innerText = value;
+             }
+        }
+        animateNumbers();
+    });
+}
+
 // Contact Us Section
 let registrationForm = document.getElementById('registrationForm');
 let emailInput = document.getElementById('email');
@@ -326,7 +362,7 @@ registrationForm.addEventListener('submit', function(event) {
 
     let firstName = document.getElementById('fName').value;
 
-    // create error message
+// create error message
     registration_form.querySelectorAll('.error-text').forEach(element => {
         element.textContent = '';
         errors = {};
@@ -403,7 +439,7 @@ function showHidePassword () {
 hideShowPassIcon.addEventListener('click', showHidePassword);
 
 
-// Cookies
+// Cookies method
 function createCookie(name,value,minutes) {
     if (minutes) {
         var date = new Date();
@@ -440,6 +476,15 @@ function agreeDivHide() {
     document.querySelector('.cookies-div').classList.add('hide');
 }
 
-// localStorage
+// sessionStorage method
 let closeBannerBtn = document.getElementById('closeBannerBtn');
 let banner = document.getElementById('banner');
+
+closeBannerBtn.addEventListener('click', () => {
+    sessionStorage.setItem("add_banner", "hide");
+    banner.classList.add("hide");
+});
+
+if (sessionStorage.getItem("add_banner") == "hide") {
+    banner.classList.add("hide");
+}

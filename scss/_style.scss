@@ -1,5 +1,4 @@
 body {
-    // background-color: gray;
     header {
         .sideNavigation-wrapper {
             .sideNavigation-bg {
@@ -26,7 +25,6 @@ body {
                 overflow-x: hidden;
                 transition: 0.5s;
                 padding-top: 60px;
-
                 .pages {
                     margin-top: 30px;
                     & > a {
@@ -55,18 +53,15 @@ body {
             }
         }
     }
-
     .cover-section {
         .parallax-bg {
             @include set-background-image (url("../images/cover-image.jpeg"), 800px, center, no-repeat, cover, fixed);
             position: relative;
-
             .cover-wrapper {
                 position: relative;
                 .transparent-div {
                     position: absolute;
                     width: 100%;
-                    // min-height: 800px;
                     height: 100%;
                     background-color: rgba(0,0,0,0.5);
                 }
@@ -334,9 +329,13 @@ body {
                 right: 70px;
                 font-size: 30px;
                 color: #fff;
+                cursor: pointer;
                 &:hover {
                     color: $hover-color;
                 }
+            }
+            &.hide {
+                display: none;
             }
         }
         @media (max-width: 767px) {
@@ -655,8 +654,8 @@ body {
         }
     }
     // end of Image Grid Section
-    .everyday-cook-section {
-        .cooking-section-wrapper {
+    .everyday-cook-statistic-section {
+        .statistics-section-wrapper {
             width: 80%;
             margin: 150px auto;
             @include display-flex(row, space-around, center);
@@ -667,7 +666,7 @@ body {
                     height: 60px;
                     margin-bottom: 30px;
                 }
-            & > h3 {
+            .value {
                 @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
                 margin-bottom: 30px;
             } 
