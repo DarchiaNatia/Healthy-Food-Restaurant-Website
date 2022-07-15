@@ -58,12 +58,6 @@ body {
 
     .cover-section {
         .parallax-bg {
-            // background-image: url("../images/cover-image.jpeg");
-            // min-height: 800px;
-            // background-attachment: fixed;
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: cover;
             @include set-background-image (url("../images/cover-image.jpeg"), 800px, center, no-repeat, cover, fixed);
             position: relative;
 
@@ -131,17 +125,17 @@ body {
                 @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
                 text-transform: uppercase;
             }
-            // .home-section-heading-3 {
-            //     @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
-            //     margin: 30px auto;
-            //     width: 85%;
-            // }
+            .home-section-heading-3 {
+                @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
+                margin: 30px auto;
+                width: 85%;
+            }
             .section-main-information {
                 margin-top: 90px;
                 @include display-flex(row, space-between, center);;
                 .info-details-div {
-                    // width: 426px;
-                    // height: 426px;
+                    width: 426px;
+                    height: 426px;
                     .img-info-details {
                         width: 100%;
                         height: 100%;
@@ -175,37 +169,27 @@ body {
                     }
                 }
             }
-        }
-        @media (max-width: $container-size-medium) {
-            .home-section-heading-3 {
-                @include text-style($Playfair-Display-font, $heading-4-size, normal, 500, 50px, 0px, #000, center);
-                margin: 30px auto;
-                width: 80%;
-            }
-            .section-main-information {
-                .info-details-div {
-                    width: 100%;
-                    height: 426px;
-                }
+            @media (min-width: 540px) and (max-width: 920px) {
+                .section-main-information {
+                    .info-details-div {
+                        width: 100%;
+                        height: 426px;
+                    }
+                } 
             }
         }
-        @media (min-width: 912px) {
-            .home-section-heading-3 {
-                @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
-                margin: 30px auto;
-                width: 85%;
-            }
-            .section-main-information {
-                .info-details-div {
-                    width: 426px;
-                    height: 426px;
+        @media (max-width: $container-size-small) {
+            .home-section-wrapper {
+                .home-section-heading-3 {
+                    @include text-style($Playfair-Display-font, $heading-4-size, normal, 500, 42px, 1px, #000, center);
                 }
-            }
+            } 
         }
     }
     // end of Home section and start Menu section
     .menu-section {
-        background-color: $menu-section-bg;
+        background-color: pink;
+        // background-color: $menu-section-bg;
         padding-top: 80px;
         .menu-section-heading {
             @include text-style($Open-Sans, $heading-6-size, normal, 500, 20px, 3px, #000, center);
@@ -256,12 +240,12 @@ body {
                         width: 180px;
                         height: 200px;
                     }
-                    @media (max-width: $container-size-small) {
-                        .transparent-box {
-                            width: 150px;
-                            height: 170px;
-                        }
-                    }
+                    // @media (max-width: $container-size-small) {
+                    //     .transparent-box {
+                    //         width: 150px;
+                    //         height: 170px;
+                    //     }
+                    // }
                     .box-elements {
                         position: relative;
                         @include display-flex(column, center, center);
