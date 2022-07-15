@@ -611,6 +611,52 @@ body .menu-section .menu-section-cover .menu-section-cover-wrapper .menu-section
   }
 }
 
+body .banner-section {
+  margin: 50px auto;
+}
+
+body .banner-section .banner-section-wrapper {
+  position: relative;
+}
+
+body .banner-section .banner-section-wrapper .banner-cover {
+  height: 200px;
+  width: 90%;
+  margin: 0px auto;
+  background-image: url("../images/banner-img.png");
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border: 2px solid grey;
+  -webkit-box-shadow: 20px 20px 100px grey;
+          box-shadow: 20px 20px 100px grey;
+}
+
+body .banner-section .banner-section-wrapper .banner-close {
+  position: absolute;
+  top: -20px;
+  right: 70px;
+  font-size: 30px;
+  color: #fff;
+}
+
+body .banner-section .banner-section-wrapper .banner-close:hover {
+  color: #a59797;
+}
+
+@media (max-width: 767px) {
+  body .banner-section .banner-section-wrapper .banner-cover {
+    height: 120px;
+  }
+  body .banner-section .banner-section-wrapper .banner-close {
+    top: -15px;
+    right: 40px;
+    font-size: 24px;
+  }
+}
+
 body .events-section .section-wrapper .events-section-heading {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -1321,7 +1367,7 @@ body .contactUs-section .form-wrapper {
 body .contactUs-section .form-wrapper .registration-form .registration-inputs {
   width: 100%;
   height: 50px;
-  border: solid 1px #b9b9b9;
+  border: 1px solid #b9b9b9;
   padding: 8px;
 }
 
@@ -1536,7 +1582,7 @@ body .our-addresses-section .search-block > h6 {
 body .our-addresses-section .search-block #filter {
   width: 200px;
   height: 40px;
-  border: solid 1px #b9b9b9;
+  border: 1px solid #b9b9b9;
   padding: 8px;
 }
 

@@ -439,3 +439,7 @@ function agree() {
 function agreeDivHide() {
     document.querySelector('.cookies-div').classList.add('hide');
 }
+
+// localStorage
+let closeBannerBtn = document.getElementById('closeBannerBtn');
+let banner = document.getElementById('banner');
