@@ -402,14 +402,15 @@ function showHidePassword () {
 }
 hideShowPassIcon.addEventListener('click', showHidePassword);
 
+
 // Cookies
 function createCookie(name,value,minutes) {
     if (minutes) {
-        let date = new Date();
+        var date = new Date();
         date.setTime(date.getTime()+(minutes*60*1000));
-        let expires = "; expires="+date.toGMTString();
+        var expires = "; expires="+date.toGMTString();
     } else {
-        let expires = "";
+        var expires = "";
     }
     document.cookie = name+"="+value+expires+"; path=/";
 }
