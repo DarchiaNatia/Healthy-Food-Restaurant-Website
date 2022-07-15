@@ -1,864 +1,913 @@
 body {
     // background-color: gray;
-header {
-    .sideNavigation-wrapper {
-        .sideNavigation-bg {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0;
-            display: none;
-            transition: 0.5s;
-            background-color: #000;
-            z-index: 2;
-        }
-        .sideNavigation {
-            height: 100vh;
-            width: 0;
-            position: fixed;
-            z-index: 3;
-            top: 0;
-            left: 0;
-            background-color: $sideNavigation-BG;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
+    header {
+        .sideNavigation-wrapper {
+            .sideNavigation-bg {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                opacity: 0;
+                display: none;
+                transition: 0.5s;
+                background-color: #000;
+                z-index: 2;
+            }
+            .sideNavigation {
+                height: 100vh;
+                width: 0;
+                position: fixed;
+                z-index: 3;
+                top: 0;
+                left: 0;
+                background-color: $sideNavigation-BG;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
 
-            .pages {
-                margin-top: 30px;
-                & > a {
-                    padding: 8px 8px 8px 32px;
-                    @include text-style($Playfair-Display-font, $navigation-link-size, normal, 300, $navigation-link-size, 1px, $navigation-color, left);
-                    display: block;
-                    transition: 0.3s;
+                .pages {
+                    margin-top: 30px;
+                    & > a {
+                        padding: 8px 8px 8px 32px;
+                        @include text-style($Playfair-Display-font, $navigation-link-size, normal, 300, $navigation-link-size, 1px, $navigation-color, left);
+                        display: block;
+                        transition: 0.3s;
+                        &:hover {
+                            color: $navigation-hover;
+                        }
+                    }
+                }
+                .close-btn {
+                    position: absolute;
+                    top: 30px;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                    color: $navigation-color;
+                    cursor: pointer;
+                    transition: 0.5s;
                     &:hover {
                         color: $navigation-hover;
                     }
                 }
             }
-            .close-btn {
-                position: absolute;
-                top: 30px;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-                color: $navigation-color;
-                cursor: pointer;
-                transition: 0.5s;
-                &:hover {
-                    color: $navigation-hover;
+        }
+    }
+
+    .cover-section {
+        .parallax-bg {
+            // background-image: url("../images/cover-image.jpeg");
+            // min-height: 800px;
+            // background-attachment: fixed;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+            @include set-background-image (url("../images/cover-image.jpeg"), 800px, center, no-repeat, cover, fixed);
+            position: relative;
+
+            .cover-wrapper {
+                position: relative;
+                .transparent-div {
+                    position: absolute;
+                    width: 100%;
+                    // min-height: 800px;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.5);
+                }
+                .cover-elements {
+                    position: relative;
+                    .burger-menu-div {
+                        @include display-flex;
+                        width: 95%;
+                        padding-top: 30px;
+                        .empty {
+                            width: 80%;
+                        }
+                        .burger-btn {
+                            width: 30px;
+                            height: 30px;
+                            cursor: pointer;
+                            @include display-flex(column, space-around, center);
+                            .line {
+                                width: 100%;
+                                height: 3px;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    .img-logo {
+                        max-width: 360px;
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        margin: 60px auto;
+                    }
+                    .heading-1 {
+                        @include text-style($Playfair-Display-font, $heading-1-size, normal, bold, $heading-1-size, 0px, #fff, center);
+                        width: 80%;
+                        margin: 60px auto;
+                    }
+                    .cover-text {
+                        @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 26px, 0px, #fff, center);
+                        width: 70%;
+                        margin: 0px auto;
+                    }
+                    .img-triangle {
+                        max-width: 120px;
+                        width: 100%;
+                        height: 100px;
+                        display: block;
+                        margin: 95px auto;
+                    }
+                }
+            }
+        }
+    } 
+    .home-section {
+        .home-section-wrapper {
+            .home-section-heading {
+                @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+                text-transform: uppercase;
+            }
+            // .home-section-heading-3 {
+            //     @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
+            //     margin: 30px auto;
+            //     width: 85%;
+            // }
+            .section-main-information {
+                margin-top: 90px;
+                @include display-flex(row, space-between, center);;
+                .info-details-div {
+                    // width: 426px;
+                    // height: 426px;
+                    .img-info-details {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .info-details-heading-6 {
+                        @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 3px, #000, center);
+                        text-transform: uppercase;
+                        margin-top: 70px;
+                    }
+                    .info-details-heading-5 {
+                        @include text-style($Playfair-Display-font, $heading-5-size, normal, bold, 30px, 0px, #000, center);
+                        width: 80%;
+                        margin: 25px auto;
+                    }
+                    .info-details-text {
+                        @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 25px, 0px, #000, center);
+                        width: 80%;
+                        margin: 0px auto;
+                    }
+                    .info-details-btn {
+                        @extend .button-basic;
+                        @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, #000, null);
+                        border-bottom: 2px solid #000;
+                        display: block;
+                        margin: 50px auto;
+                    &:hover {
+                        border-bottom: 2px solid $hover-color;
+                        color: $hover-color;
+                    }
+                    }
+                }
+            }
+        }
+        @media (max-width: $container-size-medium) {
+            .home-section-heading-3 {
+                @include text-style($Playfair-Display-font, $heading-4-size, normal, 500, 50px, 0px, #000, center);
+                margin: 30px auto;
+                width: 80%;
+            }
+            .section-main-information {
+                .info-details-div {
+                    width: 100%;
+                    height: 426px;
+                }
+            }
+        }
+        @media (min-width: 912px) {
+            .home-section-heading-3 {
+                @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
+                margin: 30px auto;
+                width: 85%;
+            }
+            .section-main-information {
+                .info-details-div {
+                    width: 426px;
+                    height: 426px;
                 }
             }
         }
     }
-}
+    // end of Home section and start Menu section
+    .menu-section {
+        background-color: $menu-section-bg;
+        padding-top: 80px;
+        .menu-section-heading {
+            @include text-style($Open-Sans, $heading-6-size, normal, 500, 20px, 3px, #000, center);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .menu-section-heading-3 {
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
+            margin-bottom: 50px;
+        }
+        .menu-wrapper {
+            @include display-flex(row, space-around, start);
+            width: 80%;
+            margin: 20px auto;
+            .menu-div {
+                width: 40%;
+                margin-bottom: 50px;
+                .menu-section-h6 {
+                    @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 2px, $menu-section-text-color, center);
+                    margin-bottom: 20px;
+                }
+                .dish-ingredients {
+                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
 
-.cover-section {
-    .parallax-bg {
-        // background-image: url("../images/cover-image.jpeg");
-        // min-height: 800px;
-        // background-attachment: fixed;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        @include set-background-image (url("../images/cover-image.jpeg"), 800px, center, no-repeat, cover, fixed);
-        position: relative;
-
-        .cover-wrapper {
-            position: relative;
-            .transparent-div {
-                position: absolute;
-                width: 100%;
-                // min-height: 800px;
-                height: 100%;
-                background-color: rgba(0,0,0,0.5);
+                }
             }
-            .cover-elements {
-                position: relative;
-                .burger-menu-div {
-                    @include display-flex;
-                    width: 95%;
-                    padding-top: 30px;
-                    .empty {
-                        width: 80%;
+        }
+        .menu-section-bg {
+            position: relative;
+            @include set-background-image (url("../images/menu-section-bg.jpg"), 740px, center, no-repeat, cover, null);
+            .menu-section-bg-wrapper {
+                position: absolute;
+                width: 45%;
+                height: auto;
+                top: 120px;
+                right: 70px;
+                @include display-flex;
+                .menu-section-cover-box {
+                    position: relative;
+                    width: 180px;
+                    height: 200px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    .transparent-box {
+                        position: absolute;
+                        background-color: #000;
+                        opacity: 0.5;
+                        width: 180px;
+                        height: 200px;
                     }
-                    .burger-btn {
-                        width: 30px;
-                        height: 30px;
-                        cursor: pointer;
-                        @include display-flex(column, space-around, center);
-                        .line {
-                            width: 100%;
-                            height: 3px;
-                            background-color: #fff;
+                    @media (max-width: $container-size-small) {
+                        .transparent-box {
+                            width: 150px;
+                            height: 170px;
+                        }
+                    }
+                    .box-elements {
+                        position: relative;
+                        @include display-flex(column, center, center);
+                        height: 100%;
+                        .menu-box-svg {
+                            width: 50px;
+                            height: 50px;
+                            fill: #fff;
+                            display: block;
+                            margin-bottom: 20px;
+                        }
+                        & > h6 {
+                            @include text-style($Open-Sans, $heading-6-size, normal, bold, $heading-6-size, 1px, #fff, center);
+                        }
+                        &:hover {
+                            .menu-box-svg {
+                                fill: $hover-color;
+                            }
                         }
                     }
                 }
-                .img-logo {
-                    max-width: 360px;
-                    width: 100%;
+            }
+            @media (min-width:$container-size-small) and (max-width:$container-size-medium){
+                .menu-section-bg-wrapper {
+                    width: 60%;
                     height: auto;
-                    display: block;
-                    margin: 60px auto;
+                    top: 30px;
+                    justify-content: space-around;
                 }
-                .heading-1 {
-                    @include text-style($Playfair-Display-font, $heading-1-size, normal, bold, $heading-1-size, 0px, #fff, center);
+            }
+            @media (max-width: $container-size-small) {
+                .menu-section-bg-wrapper {
+                    width: 90%;
+                    top: 20;
+                    right: 0;
+                    height: auto;
+                    .menu-section-cover-box {
+                        width: 150px;
+                        height: 170px;
+                    }
+                
+                    .menu-section-cover-box {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $container-size-small) {
+            .menu-wrapper {
+                .menu-div {
                     width: 80%;
-                    margin: 60px auto;
-                }
-                .cover-text {
-                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 26px, 0px, #fff, center);
-                    width: 70%;
-                    margin: 0px auto;
-                }
-                .img-triangle {
-                    max-width: 120px;
-                    width: 100%;
-                    height: 100px;
-                    display: block;
-                    margin: 95px auto;
+                    margin-bottom: 50px;
                 }
             }
         }
     }
-} 
-.home-section {
-    .home-section-wrapper {
-        .home-section-heading {
-            @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
-            text-transform: uppercase;
+    // Events Section
+    .events-section {
+        .section-wrapper {
+            .events-section-heading {
+                @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+                margin-top: 90px;
+            }
+            .events-section-heading-3 {
+                @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
+                margin-top: 30px;
+            }
+            .events-wrapper {
+                margin: 40px auto;
+                width: 90%;
+                @include display-flex(row, space-around, center);
+                .events {
+                    width: 320px;
+                    height: 310px;
+                    margin-top: 40px;
+                    .event-day {
+                        @include text-style($Open-Sans, $heading-3-size, normal, bold, $heading-3-size, 3px, #000, center);
+                        margin-bottom: 10px;
+                    }
+                    .event-month {
+                        @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                    }
+                    .event-description {
+                        @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
+                        width: 90%;
+                        margin: 0px auto;
+                    }
+                }
+            }
+            .load-buttons {
+                @include display-flex (row, center, center);
+                .load-previews-btn {
+                    display: none;
+                }
+                .load-more-btn, .load-previews-btn {
+                    font-size: 24px;
+                    cursor: pointer;
+                    margin: 30px;
+                }
+            }
         }
-        // .home-section-heading-3 {
-        //     @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
-        //     margin: 30px auto;
-        //     width: 85%;
-        // }
-        .section-main-information {
-            margin-top: 90px;
-            @include display-flex(row, space-between, center);;
-            .info-details-div {
-                // width: 426px;
-                // height: 426px;
-                .img-info-details {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+        @media (max-width: $container-size-medium) {
+            .section-wrapper {
+                .events-section-heading-3 {
+                    @include text-style($Playfair-Display-font, $heading-4-size, normal, bold, $heading-4-size, 0px, #000, center);
+                    margin-top: 30px;
+                    padding: 5px;
                 }
-                .info-details-heading-6 {
-                    @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 3px, #000, center);
-                    text-transform: uppercase;
-                    margin-top: 70px;
+                .events-wrapper {
+                    flex-direction: column;
+                    .events {
+                        width: 90%;
+                        height: auto;
+                    }
                 }
-                .info-details-heading-5 {
-                    @include text-style($Playfair-Display-font, $heding-5-size, normal, bold, 30px, 0px, #000, center);
-                    width: 80%;
-                    margin: 25px auto;
+            }   
+        }   
+    }
+    // end of Events Section
+    .health {
+        background-color: $menu-section-bg;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        .suggestion-div {
+            width: 85%;
+            margin: 0px auto;
+            @include display-flex;
+            .suggestion-text {
+                width: 40%;
+                margin-top: 60px;
+                .suggestion-text-heading {
+                    @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
+                    margin-bottom: 20px;
                 }
-                .info-details-text {
-                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 25px, 0px, #000, center);
-                    width: 80%;
-                    margin: 0px auto;
+                .text-pragraph-1, .text-pragraph-2 {
+                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
+                    width: 85%;
+                    margin-bottom: 30px;
                 }
-                .info-details-btn {
+                .read-more-button {
                     @extend .button-basic;
-                    @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, #000, null);
-                    border-bottom: 2px solid #000;
-                    display: block;
-                    margin: 50px auto;
-                 &:hover {
+                    @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
+                    border-bottom: 2px solid $menu-section-text-color;
+                    &:hover {
                     border-bottom: 2px solid $hover-color;
                     color: $hover-color;
                 }
                 }
             }
-        }
-    }
-    @media (max-width: $container-size-medium) {
-        .home-section-heading-3 {
-            @include text-style($Playfair-Display-font, $heading-4-size, normal, 500, 50px, 0px, #000, center);
-            margin: 30px auto;
-            width: 80%;
-        }
-        .section-main-information {
-            .info-details-div {
-                width: 100%;
-                height: 426px;
+            .suggestion-img {
+            width: 50%;
+                & > img {
+                    width: 100%;
+                    height: 540px;
+                    object-fit: cover;
+                }
             }
         }
-    }
-    @media (min-width: 912px) {
-        .home-section-heading-3 {
-            @include text-style($Playfair-Display-font, $heading-3-size, normal, 500, 60px, 1px, #000, center);
-            margin: 30px auto;
+        .health-section-reviews-div {
+            @include display-flex (row, space-between, start);
             width: 85%;
+            margin: 120px auto 0px;
+            .section-reviews-img {
+                width: 50%;
+                & > img {
+                    width: 100%;
+                    height: 585px;
+                    object-fit: cover;
+                }
+            }
+            .health-section-reviews-text {
+                width: 40%;
+                & > h6 {
+                    @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, left);
+                    margin-top: 60px;
+                }
+                & > h3 {
+                    @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
+                    margin-top: 30px;
+                }
+                & > i {
+                    font-size: 48px;
+                    font-weight: bold;
+                    color: #000;
+                    margin-top: 30px;
+                }
+                & > p {
+                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
+                    margin-top: 20px;
+                }
+            }
         }
-        .section-main-information {
-            .info-details-div {
-                width: 426px;
-                height: 426px;
+        @media (max-width: $container-size-medium) {
+            .suggestion-div {
+                width: 100%;
+                flex-direction: column;
+                .suggestion-text {
+                    width: 90%;
+                    margin-bottom: 50px;
+                }
+                .suggestion-img {
+                    width: 100%;
+                }
+            }
+            .health-section-reviews-div {
+                width: 100%;
+                flex-direction: column;
+                .section-reviews-img {
+                    width: 100%;
+                }
+                .health-section-reviews-text {
+                    padding: 10px;
+                    width: 90%;
+                    & > p {
+                        width: 80%;
+                    }
+                }
             }
         }
     }
-}
-// end of Home section and start Menu section
-.menu-section {
-    background-color: $menu-section-bg;
-    padding-top: 80px;
-    .menu-section-heading {
-        @include text-style($Open-Sans, $heading-6-size, normal, 500, 20px, 3px, #000, center);
-        text-transform: uppercase;
-        margin-bottom: 30px;
-    }
-    .menu-section-heading-3 {
-        @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
-        margin-bottom: 50px;
-    }
-    .menu-wrapper {
-        @include display-flex(row, space-around, start);
-        width: 80%;
-        margin: 20px auto;
-        .menu-div {
-            width: 40%;
-            margin-bottom: 50px;
-            .menu-section-h6 {
-                @include text-style($Open-Sans, $heading-6-size, normal, 400, $heading-6-size, 2px, $menu-section-text-color, center);
-                margin-bottom: 20px;
-            }
-            .dish-ingredients {
-                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
-
+    // Start of Slider Section
+    .slider-section {
+        .slider-section-heading {
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
+            margin-top: 50px;
+        }
+        @media (max-width: $container-size-medium) {
+            .slider-section-heading {
+                @include text-style($Playfair-Display-font, $heading-5-size, normal, bold, $heading-5-size, 1px, #000, center);
             }
         }
-    }
-    .menu-section-bg {
-        position: relative;
-        @include set-background-image (url("../images/menu-section-bg.jpg"), 740px, center, no-repeat, cover, null);
-        .menu-section-bg-wrapper {
-            position: absolute;
-            width: 45%;
-            height: auto;
-            top: 120px;
-            right: 70px;
-            @include display-flex;
-            .menu-section-cover-box {
-                position: relative;
-                width: 180px;
-                height: 200px;
-                margin-bottom: 20px;
+        .slider-section-text {
+            @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
+            margin-top: 20px;
+        }
+        .slider-wrapper {
+            position: relative;
+            .arrow-btn {
+                position: absolute;
+                font-size: 50px;
                 cursor: pointer;
-                .transparent-box {
-                    position: absolute;
-                    background-color: #000;
-                    opacity: 0.5;
-                    width: 180px;
-                    height: 200px;
+                top: 40%;
+                &:hover {
+                    opacity: 0.6;
                 }
-                @media (max-width: 600px) {
-                    .transparent-box {
-                        width: 150px;
-                        height: 170px;
+            }
+            .arrow-left {
+                left: 50px;
+            }
+            .arrow-right {
+                right: 50px;
+            }
+            .slider {
+                @include display-flex(column, space-between, center);
+                width: 75%;
+                margin: 50px auto;
+                .slider-content {
+                    @include display-flex (row, space-between, center);
+                    width: 100%;
+                    margin-bottom: 20px;
+                    .slider-image {
+                        width: 310px;
+                        height: 360px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        @include transition-ease-in-out;
+                        &:hover {
+                            filter: brightness(70%);
+                        }
                     }
                 }
-                .box-elements {
-                    position: relative;
-                    @include display-flex(column, center, center);
-                    height: 100%;
-                    .menu-box-svg {
-                        width: 50px;
-                        height: 50px;
-                        fill: #fff;
-                        display: block;
-                        margin-bottom: 20px;
+                .dots-wrapper {
+                    @include display-flex(row, center, center);
+                    .sliderDot {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: $dots-color;
+                        margin: 5px;
+                        cursor: pointer;
                     }
-                    & > h6 {
-                        @include text-style($Open-Sans, $heading-6-size, normal, bold, $heading-6-size, 1px, #fff, center);
+                    .sliderDot.active {
+                        background-color: darkred;
                     }
-                    &:hover {
-                        .menu-box-svg {
-                            fill: $hover-color;
+                } 
+            }
+            @media (min-width: $container-size-small) and (max-width: 1024px) {
+                .slider {
+                    .slider-content {
+                        @include display-flex(column, center, center);
+                        .slider-image {
+                            width: 310px;
+                            height: 360px;
+                            margin-bottom: 20px;
                         }
                     }
                 }
             }
         }
-        @media (min-width:600px) and (max-width:$container-size-medium){
-            .menu-section-bg-wrapper {
-                width: 60%;
-                height: auto;
-                top: 30px;
-                justify-content: space-around;
-            }
-        }
-        @media (max-width: 600px) {
-            .menu-section-bg-wrapper {
-                width: 90%;
-                top: 20;
-                right: 0;
-                height: auto;
-                .menu-section-cover-box {
-                    width: 150px;
-                    height: 170px;
-                }
-               
-                .menu-section-cover-box {
-                    margin-bottom: 20px;
-                }
-            }
-        }
-    }
-    @media (max-width: 600px) {
-        .menu-wrapper {
-            .menu-div {
-                width: 80%;
-                margin-bottom: 50px;
-            }
-        }
-    }
-}
-// Events Section
-.events-section {
-    .section-wrapper {
-        .events-section-heading {
-            @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
-            margin-top: 90px;
-        }
-        .events-section-heading-3 {
-            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
-            margin-top: 30px;
-        }
-        .events-wrapper {
-            margin: 40px auto;
-            width: 90%;
-            @include display-flex(row, space-around, center);
-            .events {
-                width: 320px;
-                height: 310px;
-                margin-top: 40px;
-                .event-day {
-                    @include text-style($Open-Sans, $heading-3-size, normal, bold, $heading-3-size, 3px, #000, center);
-                    margin-bottom: 10px;
-                }
-                .event-month {
-                    @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, center);
-                    text-transform: uppercase;
-                    margin-bottom: 20px;
-                }
-                .event-description {
-                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
-                    width: 90%;
-                    margin: 0px auto;
-                }
-            }
-        }
-        .load-buttons {
-            @include display-flex (row, center, center);
-            .load-previews-btn {
-                display: none;
-            }
-            .load-more-btn, .load-previews-btn {
-                font-size: 24px;
-                cursor: pointer;
-                margin: 30px;
-            }
-        }
-    }
-    @media (max-width: $container-size-medium) {
-        .section-wrapper {
-            .events-section-heading-3 {
-                @include text-style($Playfair-Display-font, $heading-4-size, normal, bold, $heading-4-size, 0px, #000, center);
-                margin-top: 30px;
-                padding: 5px;
-            }
-            .events-wrapper {
-                flex-direction: column;
-                .events {
-                    width: 90%;
-                    height: auto;
-                }
-            }
-        }   
-    }   
-}
-// end of Events Section
-.health {
-    background-color: $menu-section-bg;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    .suggestion-div {
-        width: 85%;
-        margin: 0px auto;
-        @include display-flex;
-        .suggestion-text {
-            width: 40%;
-            margin-top: 60px;
-            .suggestion-text-heading {
-                @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
-                margin-bottom: 20px;
-            }
-            .text-pragraph-1, .text-pragraph-2 {
-                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
-                width: 85%;
-                margin-bottom: 30px;
-            }
-            .read-more-button {
-                @extend .button-basic;
-                @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
-                border-bottom: 2px solid $menu-section-text-color;
-                &:hover {
-                border-bottom: 2px solid $hover-color;
-                color: $hover-color;
-            }
-            }
-        }
-        .suggestion-img {
-           width: 50%;
-            & > img {
-                width: 100%;
-                height: 540px;
-                object-fit: cover;
-            }
-        }
-    }
-    .health-section-reviews-div {
-        @include display-flex (row, space-between, start);
-        width: 85%;
-        margin: 120px auto 0px;
-        .section-reviews-img {
-            width: 50%;
-            & > img {
-                width: 100%;
-                height: 585px;
-                object-fit: cover;
-            }
-        }
-        .health-section-reviews-text {
-            width: 40%;
-            & > h6 {
-                @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 3px, #000, left);
-                margin-top: 60px;
-            }
-            & > h3 {
-                @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, left);
-                margin-top: 30px;
-            }
-            & > i {
-                font-size: 48px;
-                font-weight: bold;
-                color: #000;
-                margin-top: 30px;
-            }
-            & > p {
-                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, left);
-                margin-top: 20px;
-            }
-        }
-    }
-    @media (max-width: $container-size-medium) {
-        .suggestion-div {
-            width: 100%;
-            flex-direction: column;
-            .suggestion-text {
-                width: 90%;
-                margin-bottom: 50px;
-            }
-            .suggestion-img {
-                width: 100%;
-            }
-        }
-        .health-section-reviews-div {
-            width: 100%;
-            flex-direction: column;
-            .section-reviews-img {
-                width: 100%;
-            }
-            .health-section-reviews-text {
-                padding: 10px;
-                width: 90%;
-                & > p {
-                    width: 80%;
-                }
-            }
-        }
-    }
-}
-// Start of Slider Section
-.slider-section {
-    .slider-section-heading {
-        @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, $heading-3-size, 0px, #000, center);
-        margin-top: 50px;
-    }
-    @media (max-width: $container-size-medium) {
-        .slider-section-heading {
-            @include text-style($Playfair-Display-font, $heding-5-size, normal, bold, $heding-5-size, 1px, #000, center);
-        }
-    }
-    .slider-section-text {
-        @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, $menu-section-text-color, center);
-        margin-top: 20px;
-    }
-    .slider-wrapper {
-        position: relative;
-        .arrow-btn {
-            position: absolute;
-            font-size: 50px;
-            cursor: pointer;
-            top: 40%;
-            &:hover {
-                opacity: 0.6;
-            }
-        }
-        .arrow-left {
-            left: 50px;
-        }
-        .arrow-right {
-            right: 50px;
-        }
-        .slider {
-            @include display-flex(column, space-between, center);
-            width: 75%;
-            margin: 50px auto;
-            .slider-content {
-                @include display-flex (row, space-between, center);
-                width: 100%;
-                margin-bottom: 20px;
-                .slider-image {
-                    width: 310px;
-                    height: 360px;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    @include transition-ease-in-out;
-                    &:hover {
-                        filter: brightness(70%);
-                    }
-                }
-            }
-            .dots-wrapper {
-                @include display-flex(row, center, center);
-                .sliderDot {
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background-color: $dots-color;
-                    margin: 5px;
-                    cursor: pointer;
-                }
-                .sliderDot.active {
-                    background-color: darkred;
-                }
-            } 
-        }
-        @media (min-width: 600px) and (max-width: 1024px) {
+        @media (max-width: $container-size-small) {
             .slider {
                 .slider-content {
-                    @include display-flex(column, center, center);
                     .slider-image {
-                        width: 310px;
-                        height: 360px;
+                        width: 100%;
                         margin-bottom: 20px;
                     }
                 }
             }
-        }
-    }
-    @media (max-width: 600px) {
-        .slider {
-            .slider-content {
-                .slider-image {
-                    width: 100%;
-                    margin-bottom: 20px;
+            .slider-wrapper {
+                .arrow-btn {
+                    font-size: 30px;
+                }
+                .arrow-left {
+                    left: 10px;
+                }
+                .arrow-right {
+                    right: 10px;
                 }
             }
         }
-        .slider-wrapper {
-            .arrow-btn {
-                font-size: 30px;
-            }
-            .arrow-left {
-                left: 10px;
-            }
-            .arrow-right {
-                right: 10px;
+        .slider-readMore-btn {
+            @extend .button-basic;
+                @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
+                border-bottom: 2px solid $menu-section-text-color;
+                display: block;
+                margin: 40px auto;
+                &:hover {
+                border-bottom: 2px solid $hover-color;
+                color: $hover-color;
             }
         }
     }
-    .slider-readMore-btn {
-        @extend .button-basic;
-            @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, $menu-section-text-color, null);
-            border-bottom: 2px solid $menu-section-text-color;
-            display: block;
-            margin: 40px auto;
-            &:hover {
-            border-bottom: 2px solid $hover-color;
-            color: $hover-color;
-        }
-    }
-}
-// end of Slider Section
-.image-grid-section {
-    .image-grid {
-        width: 85%;
-        margin: 70px auto;
-        padding: $image-grid-gap;
-        display: grid;
-        grid-template-columns: repeat($image-grid-num-cols, 1fr);
-        grid-auto-rows: $image-grid-row-height;
-        gap: $image-grid-gap;
+    // end of Slider Section
+    .image-grid-section {
+        .image-grid {
+            width: 85%;
+            margin: 70px auto;
+            padding: $image-grid-gap;
+            display: grid;
+            grid-template-columns: repeat($image-grid-num-cols, 1fr);
+            grid-auto-rows: $image-grid-row-height;
+            gap: $image-grid-gap;
 
-        & > img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    .image-grid-column-2 {
-        grid-column: span 2;
-    }
-    .image-grid-row-2 {
-        grid-row: span 2;
-    }
-}
-// end of Image Grid Section
-.everyday-cook-section {
-    .cooking-section-wrapper {
-        width: 80%;
-        margin: 150px auto;
-        @include display-flex(row, space-around, center);
-        .main-dish, .garnish, .desserts {
-            @include display-flex(column, center, center);
-            .cooking-section-svg {
-                width: 60px;
-                height: 60px;
-                margin-bottom: 30px;
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
-        & > h3 {
-            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
-            margin-bottom: 30px;
-        } 
-        & > h6 {
-            @include text-style($Open-Sans, $heading-6-size, normal, 400, 22px, 4px, #000, center);
-            text-transform: uppercase;
-        }   
         }
-        .everyday-cook {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background-color: #000;
+        .image-grid-column-2 {
+            grid-column: span 2;
+        }
+        .image-grid-row-2 {
+            grid-row: span 2;
+        }
+    }
+    // end of Image Grid Section
+    .everyday-cook-section {
+        .cooking-section-wrapper {
+            width: 80%;
+            margin: 150px auto;
+            @include display-flex(row, space-around, center);
+            .main-dish, .garnish, .desserts {
+                @include display-flex(column, center, center);
+                .cooking-section-svg {
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 30px;
+                }
+            & > h3 {
+                @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
+                margin-bottom: 30px;
+            } 
             & > h6 {
-                @include text-style($Open-Sans, $heading-6-size, normal, 500, 22px, 3px, #fff, center);
+                @include text-style($Open-Sans, $heading-6-size, normal, 400, 22px, 4px, #000, center);
                 text-transform: uppercase;
-                width: 120px;
-                margin: 100px auto;
-            }
-        } 
-    }
-    @media (max-width: $container-size-medium) {
-        .cooking-section-wrapper {
-            .main-dish, .garnish, .desserts {
-                width: 50%;
-            }
-        } 
-    }
-    @media (max-width: 600px) {
-        .cooking-section-wrapper {
-            flex-direction: column;
-            .main-dish, .garnish, .desserts {
-                margin-bottom: 30px;
-                width: 70%;
+            }   
             }
             .everyday-cook {
-                width: 220px;
-                height: 220px;
-            }
-        } 
-    }
-}
-// Contact Us Section
-.contactUs-section {
-    .contactUs-section-heading {
-        @include text-style($Open-Sans, $heading-6-size, normal, 500, 22px, 3px, #000, center);
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-    .contactUs-section-h3 {
-        @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
-        margin-bottom: 40px;
-    }
-    .form-wrapper {
-        width: 45%;
-        margin: 0px auto 50px; 
-        .registration-form {
-            .registration-inputs {
-                width: 100%;
-                height: 50px;
-                border: solid 1px $form-border-color;
-                padding: 8px;
-                &::placeholder {
-                    @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                background-color: #000;
+                & > h6 {
+                    @include text-style($Open-Sans, $heading-6-size, normal, 500, 22px, 3px, #fff, center);
+                    text-transform: uppercase;
+                    width: 120px;
+                    margin: 100px auto;
                 }
-            }
-            .input-labeles {
-                @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $input-labels-text-color, left);
-            }
-            .fName-div, .lName-div, .email-div, .password-div, .repeat-password-div {
-                display: flex;
+            } 
+        }
+        @media (max-width: $container-size-medium) {
+            .cooking-section-wrapper {
+                .main-dish, .garnish, .desserts {
+                    width: 50%;
+                }
+            } 
+        }
+        @media (max-width: $container-size-small) {
+            .cooking-section-wrapper {
                 flex-direction: column;
-                justify-content: space-between;
-            }
-            .fullName-inputs-wrapper {
-                @include display-flex(row, space-between, top);
-                .fName-div, .lName-div {
-                    width: 48%;
+                .main-dish, .garnish, .desserts {
+                    margin-bottom: 30px;
+                    width: 70%;
                 }
-            }
-            .email-div, .password-div, .repeat-password-div {
-                width: 100%;
-                margin-top: 10px;
-            }
-            .password-div {
-                position: relative;
-            }
-            .show-hide-password-icon {
-                position: absolute;
-                right: 15px;
-                top: 15px;
-                color: rgb(26, 25, 25);
-            }
-            .terms-and-conditions-div {
-                @include display-flex(row, space-between, top);
-                .radio-buttons, .check-box {
-                    margin-top: 10px;
-                    margin-bottom: 10px;
+                .everyday-cook {
+                    width: 220px;
+                    height: 220px;
                 }
-                .radio-btns-title {
-                    @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 0px, $input-labels-text-color, left);
-                    margin-bottom: 10px;
-                }
-            }
-            .registration-submit-button {
-                @extend .button-basic;
-                @include text-style($Open-Sans, $btn-text-size, normal, bold, 16px, 2px, #000, null);
-                border: 2px solid #000;
-                padding: 15px 30px;
-                display: block;
-                margin: 50px auto 70px;
-                &:hover {
-                    background-color: #000;
-                    color: #fff;
-                }
-            }
-            .error-text {
-                color: $error-text-color;
-                font-size: 16px;
-                font-style: italic;
-                display: block;
-            }
+            } 
         }
     }
-    @media (max-width: $container-size-medium) {
-        .form-wrapper {
-            width: 90%;
-            .registration-inputs {
-                margin-bottom: 15px;
-            }
-        }
-    }
-}
-// Addresses Section Start
-.our-addresses-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    .search-block{
-        margin-bottom: 20px;
-        & > h6 {
-            display: inline;
-            height: 60px;
-            @include text-style($Open-Sans, $addresses-text-size, normal, 400, 18px, 0px, $addresses-text-color, left);
-        }
-        #filter {
-            width: 200px;
-            height: 40px;
-            border: solid 1px $form-border-color;
-            padding: 8px;
-        }
-    }
-    .address-section-wrapper {
-        @include set-background-image (url("../images/map.png"), 800px, center, no-repeat, cover, null);
-        @include display-flex(row, space-around, center);
-        width: 90%;
-        margin: 0px auto;
-        padding: 20px;
-        height: auto;
-        .address {
-            @include display-flex(column, space-around, left);
-            width: 200px;
-            height: 150px;
-            background-color:  #fff;
+    // Contact Us Section
+    .contactUs-section {
+        .contactUs-section-heading {
+            @include text-style($Open-Sans, $heading-6-size, normal, 500, 22px, 3px, #000, center);
+            text-transform: uppercase;
             margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 20px 20px 50px grey;
-            .address-icon {
-                color: $addresses-icon-color;
-                font-size: 16px;
-                margin-right: 5px;
-                &:hover {
-                    color: darkred;
+        }
+        .contactUs-section-h3 {
+            @include text-style($Playfair-Display-font, $heading-3-size, normal, bold, 55px, 0px, #000, center);
+            margin-bottom: 40px;
+        }
+        .form-wrapper {
+            width: 45%;
+            margin: 0px auto 50px; 
+            .registration-form {
+                .registration-inputs {
+                    width: 100%;
+                    height: 50px;
+                    border: solid 1px $form-border-color;
+                    padding: 8px;
+                    &::placeholder {
+                        @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $form-text-color, left);
+                    }
+                }
+                .input-labeles {
+                    @include text-style ($Open-Sans, 16px, normal, 400, 16px, 0px, $input-labels-text-color, left);
+                }
+                .fName-div, .lName-div, .email-div, .password-div, .repeat-password-div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                .fullName-inputs-wrapper {
+                    @include display-flex(row, space-between, top);
+                    .fName-div, .lName-div {
+                        width: 48%;
+                    }
+                }
+                .email-div, .password-div, .repeat-password-div {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                .password-div {
+                    position: relative;
+                }
+                .show-hide-password-icon {
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    color: rgb(26, 25, 25);
+                }
+                .terms-and-conditions-div {
+                    @include display-flex(row, space-between, top);
+                    .radio-buttons, .check-box {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    .radio-btns-title {
+                        @include text-style($Open-Sans, $heading-6-size, normal, 500, $heading-6-size, 0px, $input-labels-text-color, left);
+                        margin-bottom: 10px;
+                    }
+                }
+                .registration-submit-button {
+                    @extend .button-basic;
+                    @include text-style($Open-Sans, $btn-text-size, normal, bold, 16px, 2px, #000, null);
+                    border: 2px solid #000;
+                    padding: 15px 30px;
+                    display: block;
+                    margin: 50px auto 70px;
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+                .error-text {
+                    color: $error-text-color;
+                    font-size: 16px;
+                    font-style: italic;
+                    display: block;
                 }
             }
-            .addresses-text, .name-text, .phone-text {
+        }
+        @media (max-width: $container-size-medium) {
+            .form-wrapper {
+                width: 90%;
+                .registration-inputs {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    // Addresses Section Start
+    .our-addresses-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .search-block{
+            margin-bottom: 20px;
+            & > h6 {
+                display: inline;
+                height: 60px;
                 @include text-style($Open-Sans, $addresses-text-size, normal, 400, 18px, 0px, $addresses-text-color, left);
             }
+            #filter {
+                width: 200px;
+                height: 40px;
+                border: solid 1px $form-border-color;
+                padding: 8px;
+            }
         }
-        .address.hide {
-            display: none;
-        }
-    }
-}
-// Footer Section
-footer {
-    .footer-wrapper {
-        width: 100%;
-        height: 250px;
-        background-color: $footer-bg-color;
-        .social-network-div {
-            @include display-flex(row, center, center);
+        .address-section-wrapper {
+            @include set-background-image (url("../images/map.png"), 800px, center, no-repeat, cover, null);
+            @include display-flex(row, space-around, center);
+            width: 90%;
+            margin: 0px auto;
             padding: 20px;
-            & > a {
-                margin: 20px;
-                color: #fff;
-                font-size: 24px;
-                &:hover {
-                    color: $social-network-hover-color;
+            height: auto;
+            .address {
+                @include display-flex(column, space-around, left);
+                width: 200px;
+                height: 150px;
+                background-color:  #fff;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 20px 20px 50px grey;
+                .address-icon {
+                    color: $addresses-icon-color;
+                    font-size: 16px;
+                    margin-right: 5px;
+                    &:hover {
+                        color: darkred;
+                    }
+                }
+                .addresses-text, .name-text, .phone-text {
+                    @include text-style($Open-Sans, $addresses-text-size, normal, 400, 18px, 0px, $addresses-text-color, left);
                 }
             }
-        }
-        .footer-content {
-            & > p {
-                @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, #fff, center);
-                width: 40%;
-                margin: 0px auto;
+            .address.hide {
+                display: none;
             }
         }
     }
-    @media (max-width: $container-size-medium){
+    // Footer Section
+    footer {
         .footer-wrapper {
-            height: 240px;
+            width: 100%;
+            height: 250px;
+            background-color: $footer-bg-color;
             .social-network-div {
-                padding: 5px;
+                @include display-flex(row, center, center);
+                padding: 20px;
+                & > a {
+                    margin: 20px;
+                    color: #fff;
+                    font-size: 24px;
+                    &:hover {
+                        color: $social-network-hover-color;
+                    }
+                }
             }
             .footer-content {
                 & > p {
-                    width: 70%;
-                    padding: 10px;
+                    @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 30px, 0px, #fff, center);
+                    width: 40%;
+                    margin: 0px auto;
+                }
+            }
+        }
+        @media (max-width: $container-size-medium){
+            .footer-wrapper {
+                height: 240px;
+                .social-network-div {
+                    padding: 5px;
+                }
+                .footer-content {
+                    & > p {
+                        width: 70%;
+                        padding: 10px;
+                    }
                 }
             }
         }
     }
-}
+    .cookies-div {
+        @include display-flex(column, space-around, center);
+        width: 80%;
+        height: 200px;
+        background-color: $cookies-bg-color;
+        position: fixed;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        box-shadow: 40px 40px 120px $cookies-bg-color;
+       
+        & > h5 {
+            @include text-style($Open-Sans, $heading-5-size, normal, bold, $heading-5-size, 0px, #fff, center);
+        }
+        & > p {
+            @include text-style($Open-Sans, $paragraph-size-01, normal, 400, 20px, 0px, #fff, center);
+            width: 75%;
+            margin: 0px auto;
+        }
+        .accept-btn {
+            @extend .button-basic;
+            @include text-style($Open-Sans, $btn-text-size, normal, 400, 16px, 2px, #000, null);
+            border: 2px solid #000;
+            display: block;
+            padding: 10px;
+            margin: 20px auto;
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    @media (max-width: $container-size-medium) {
+        .cookies-div {
+            width: 90%;
+            height: auto;
+            & > h5 {
+                font-size: $heading-6-size;
+                margin-bottom: 20px;
+            }
+            & > p {
+                @include text-style($Open-Sans, $paragraph-size-02, normal, 400, 16px, 0px, #fff, center);
+            }
+        }
+    }
 }

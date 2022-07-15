@@ -401,3 +401,40 @@ function showHidePassword () {
     }
 }
 hideShowPassIcon.addEventListener('click', showHidePassword);
+
+// Cookies
+function createCookie(name,value,minutes) {
+    if (minutes) {
+        let date = new Date();
+        date.setTime(date.getTime()+(minutes*60*1000));
+        let expires = "; expires="+date.toGMTString();
+    } else {
+        let expires = "";
+    }
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+if (getCookie('agree') == 1) {
+    agreeDivHide();
+}
+function agree() {
+    createCookie("agree", 1, 5);
+    agreeDivHide();
+}
+function agreeDivHide() {
+    document.querySelector('.cookies-div').classList.add('hide');
+}

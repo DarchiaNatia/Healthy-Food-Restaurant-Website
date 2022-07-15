@@ -61,7 +61,7 @@ a {
   text-decoration: none;
 }
 
-.button-basic, body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn, body .health .suggestion-div .suggestion-text .read-more-button, body .slider-section .slider-readMore-btn, body .contactUs-section .form-wrapper .registration-form .registration-submit-button {
+.button-basic, body .home-section .home-section-wrapper .section-main-information .info-details-div .info-details-btn, body .health .suggestion-div .suggestion-text .read-more-button, body .slider-section .slider-readMore-btn, body .contactUs-section .form-wrapper .registration-form .registration-submit-button, body .cookies-div .accept-btn {
   background: none;
   border: none;
   padding: 5px 2px;
@@ -1658,6 +1658,102 @@ body footer .footer-wrapper .footer-content > p {
   body footer .footer-wrapper .footer-content > p {
     width: 70%;
     padding: 10px;
+  }
+}
+
+body .cookies-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 200px;
+  background-color: #a19f9f;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 20px;
+  -webkit-box-shadow: 40px 40px 120px #a19f9f;
+          box-shadow: 40px 40px 120px #a19f9f;
+}
+
+body .cookies-div > h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: center;
+}
+
+body .cookies-div > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: center;
+  width: 75%;
+  margin: 0px auto;
+}
+
+body .cookies-div .accept-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #000;
+  border: 2px solid #000;
+  display: block;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+body .cookies-div .accept-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+body .cookies-div.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body .cookies-div {
+    width: 90%;
+    height: auto;
+  }
+  body .cookies-div > h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  body .cookies-div > p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: #fff;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=global.css.map */
